@@ -469,6 +469,7 @@ color: white
     display: none;
     flex-direction: column;
     position: absolute;
+    align-items: center;
     top: 60px;
     right: 0;
     background-color: rgba(0, 0, 0, 0.95);
@@ -596,20 +597,35 @@ color: white
     gap: 15px;
     max-width: 100%;
     display: none;
+  
+    align-items: center;   /* <--- Center items horizontally */
+    text-align: center;    /* <--- Center text inside items */
   }
+  
   
   .nav-links.active {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+  
   
   .menu-toggle {
     display: block;
   }
   
   .contact {
-    margin-left: auto; /* Pushes contact to the right */
-    padding-right: 50px; /* Space for menu toggle */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
   }
+  
 }
 @media (max-width: 768px) {
   .image-gallery {
