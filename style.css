@@ -632,7 +632,7 @@ color: white
     order: -1; /* Keep image above text */
     width: 100%;
     text-align: center;
-    margin-top: 1000px; /* Push image below header */
+    margin-top: 600px; /* Push image below header */
   }
 
   .image-gallery img#mainImage {
