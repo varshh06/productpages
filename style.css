@@ -43,7 +43,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); 
+  background-color: rgba(0, 0, 0, 0.6); 
   z-index: -1;
 }
 
@@ -124,7 +124,7 @@ z-index: 3;
 
 
 .contact {
-color: white; 
+color: black; 
 display: flex;
 align-items: center;
 gap: 8px;
@@ -214,6 +214,7 @@ fill: white;
   font-size: 20px;
   line-height: 33px;
   letter-spacing: 0.03em;
+  font-weight: 400;
 }
 
 .buy-button {
@@ -338,7 +339,7 @@ flex-shrink: 0;
 
 .phone-number {
 font-size: 20px;
-color: white
+color: black;
 }
 
 
@@ -409,7 +410,7 @@ color: white
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 425px) {
   .product-details p {
     font-size: 16px;
     line-height: 26px;
@@ -521,6 +522,7 @@ color: white
   @media (max-width: 768px) {
     .image-gallery {
       order: -1; /* Image first on mobile */
+      
     }
     .product-container {
       margin-top: 70px; /* Smaller header on mobile */
@@ -647,3 +649,48 @@ color: white
     padding: 20px;
   }
 }
+@media (max-width: 425px) {
+  .close-btn {
+    top: 5px;
+    right: 10px;
+    font-size: 20px; /* Slightly smaller to avoid overlap */
+  }
+
+  .popup-box {
+    padding-top: 30px; /* Give some extra space for the close button */
+  }
+}
+.buy-button {
+  display: flex;
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
+  padding: 12px 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #8BDD18;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s;
+  text-align: center;
+  line-height: 1;             /* Avoid vertical misalignment */
+  white-space: nowrap;        /* Prevent wrapping */
+}
+/* Phone number in the popup box */
+.phone-number {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+/* Phone number in the top header */
+.header-phone-number {
+  font-size: 20px;
+  color: white;
+  font-weight: 10px;
+}
+
