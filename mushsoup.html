@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <div class="background">
+    <header class="top-header">
+
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="lucky-farm-badge">
+        <img src="C:\Users\varsh\OneDrive\Desktop\web\images\logo.png" alt="Lucky Farm Logo" />
+        <span>Lucky Farm</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#">Language</a>
+        <div class="contact">
+          <a href="tel:+919842583652" class="phone-link">
+            <svg class="phone-icon" width="20" height="18" viewBox="0 0 24 27" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.72 3.38889C4.8 4.67444 5 5.93111 5.32 7.13L3.72 8.86333C3.17333 7.13 2.82667 5.29556 2.70667 3.38889H4.72ZM17.8667 20.7511C19 21.0978 20.16 21.3144 21.3333 21.4011V23.5533C19.5733 23.4233 17.88 23.0478 16.2667 22.47L17.8667 20.7511ZM6 0.5H1.33333C0.6 0.5 0 1.15 0 1.94444C0 15.5078 10.1467 26.5 22.6667 26.5C23.4 26.5 24 25.85 24 25.0556V20.0144C24 19.22 23.4 18.57 22.6667 18.57C21.0133 18.57 19.4 18.2811 17.9067 17.7467C17.7733 17.6889 17.6267 17.6744 17.4933 17.6744C17.1467 17.6744 16.8133 17.8189 16.5467 18.0933L13.6133 21.2711C9.84 19.1767 6.74667 15.84 4.82667 11.7522L7.76 8.57444C8.13333 8.17 8.24 7.60667 8.09333 7.10111C7.6 5.48333 7.33333 3.75 7.33333 1.94444C7.33333 1.15 6.73333 0.5 6 0.5Z" fill=""/>
+            </svg>
+            <span class="header-phone-number">+91 9842583652</span>
+          </a>
+        </div>
+      </nav>
+    
+
+    </header>
+
+
+
+    <div class="product-container">
+      <div class="image-gallery">
+        <img id="mainImage" src="C:\Users\varsh\OneDrive\Desktop\web\images\soup.jpg" alt="Main product image" />
+        <div class="thumbnail-images">
+          <img src="C:\Users\varsh\OneDrive\Desktop\web\images\soup.jpg" alt="Thumbnail 1" onclick="changeImage(this)" />
+          <img src="C:\Users\varsh\OneDrive\Desktop\web\images\mushsoup1.jpg" alt="Thumbnail 2" onclick="changeImage(this)" />
+          <img src="C:\Users\varsh\OneDrive\Desktop\web\images\souppowder.jpg" alt="Thumbnail 3" onclick="changeImage(this)" />
+        </div>
+      </div>
+
+
+
+      <div class="product-details">
+        <h1>MUSHROOM SOUP</h1>
+        <h4>Price: ₹75.00</h4>
+        <h4>Weight: 40gm</h4>
+        <p>Mushroom soup offers various health benefits, including boosting the immune system, improving digestion, and supporting heart health. It's a good source of vitamins, minerals, and antioxidants, making it a nutritious and delicious addition to a balanced diet.</p>
+        <button class="buy-button" onclick="showPopup()">Buy Now
+          <svg width="10" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 16L6.575 14.6L12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16Z" fill="black"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <button class="close-btn" onclick="hidePopup()">×</button>
+      <div class="popup-text">
+        YOU CAN PLACE YOUR ORDER BY SIMPLY CALLING
+      </div>
+      <div class="popup-content">
+        <a href="tel:+919842583652" class="phone-number">
+          <svg width="20" height="18" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.72 3.38889C4.8 4.67444 5 5.93111 5.32 7.13L3.72 8.86333C3.17333 7.13 2.82667 5.29556 2.70667 3.38889H4.72ZM17.8667 20.7511C19 21.0978 20.16 21.3144 21.3333 21.4011V23.5533C19.5733 23.4233 17.88 23.0478 16.2667 22.47L17.8667 20.7511ZM6 0.5H1.33333C0.6 0.5 0 1.15 0 1.94444C0 15.5078 10.1467 26.5 22.6667 26.5C23.4 26.5 24 25.85 24 25.0556V20.0144C24 19.22 23.4 18.57 22.6667 18.57C21.0133 18.57 19.4 18.2811 17.9067 17.7467C17.7733 17.6889 17.6267 17.6744 17.4933 17.6744C17.1467 17.6744 16.8133 17.8189 16.5467 18.0933L13.6133 21.2711C9.84 19.1767 6.74667 15.84 4.82667 11.7522L7.76 8.57444C8.13333 8.17 8.24 7.60667 8.09333 7.10111C7.6 5.48333 7.33333 3.75 7.33333 1.94444C7.33333 1.15 6.73333 0.5 6 0.5Z" fill=""/>
+          </svg>
+          +91 9842583652
+        </a>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <script>
+    function changeImage(imgElement) {
+      const newSrc = imgElement.src.replace('100x100', '500x500');
+      document.getElementById('mainImage').src = newSrc;
+      document.getElementById('mainImage').alt = imgElement.alt.replace('Thumbnail', 'Main image');
+    }
+    function showPopup() {
+  document.getElementById('popup').style.display = 'flex';
+  }
+function hidePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+
+
+  </script>
+
+</body>
+</html>
