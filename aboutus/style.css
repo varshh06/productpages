@@ -1,1 +1,368 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html,
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+body {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Overlay */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+/* About Us Main Container */
+.about-us {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px; /* Reduced padding */
+  overflow: hidden;
+}
+
+/* Header Section */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Reduced gap */
+  background: #a3ec6b;
+  border-radius: 15px 0; /* Reduced border radius */
+  width: 200px; /* Reduced width */
+  height: 50px; /* Reduced height */
+  padding: 8px; /* Reduced padding */
+}
+
+.logo-img {
+  width: 46px;
+  height: 34px;
+  background: #a3ec6b;
+  mix-blend-mode: luminosity;
+}
+
+.logo-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 22px; /* Reduced font size */
+  color: #000;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Reduced gap */
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.navbar a {
+  font-size: 18px; /* Reduced font size */
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:active,
+.navbar a:focus {
+  color: #a3ec6b;
+}
+
+/* Contact in Navbar */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Reduced gap */
+  font-size: 16px; /* Reduced font size */
+  color: white;
+}
+
+.header-phone-number {
+  font-size: 16px; /* Reduced font size */
+  color: white;
+}
+
+.phone-icon {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; /* Reduced font size */
+}
+
+/* Main Heading */
+.main-heading {
+  font-family: "Rubik", "Times New Roman", Times, serif;
+  font-size: 40px; /* Reduced font size */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px; /* Reduced margin */
+  color: white;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Reduced gap */
+  max-width: 1280px;
+  margin-bottom: 40px; /* Reduced margin */
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 350px; /* Reduced width */
+  height: 250px; /* Reduced height */
+  border-radius: 20px; /* Reduced border radius */
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px; /* Reduced width */
+}
+
+.heading {
+  font-family: Rubik, "Times New Roman";
+  font-size: 35px; /* Reduced font size */
+  font-weight: 600;
+  margin-bottom: 10px; /* Reduced margin */
+  color: white;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px; /* Reduced font size */
+  line-height: 30px; /* Adjusted line height */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Map Section */
+.map iframe {
+  width: 650px; /* Reduced width */
+  height: 300px; /* Reduced height */
+  border: none;
+  border-radius: 15px; /* Reduced border radius */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer-centered {
+  background-color: #a3ec6b;
+  font-size: 20px; /* Reduced font size */
+  color: #000;
+  font-family: "Segoe UI", sans-serif;
+  width: 100%;
+  padding: 20px 10px 8px 10px; /* Reduced padding */
+}
+
+.footer-flex {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px; /* Reduced gap */
+}
+
+.footer-address {
+  min-width: 260px; /* Reduced width */
+}
+
+.footer-address .address {
+  font-size: 18px; /* Reduced font size */
+  line-height: 1.4; /* Reduced line height */
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Reduced gap */
+}
+
+.footer-social a img {
+  width: 35px; /* Reduced size */
+  height: 35px; /* Reduced size */
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px; /* Reduced padding */
+  gap: 10px; /* Reduced gap */
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.footer-bottom h2 {
+  font-size: 24px; /* Reduced font size */
+  color: #fff;
+  margin: 0;
+}
+
+.footer-bottom h3 {
+  font-size: 32px; /* Reduced font size */
+  color: #fff;
+  margin: 0;
+}
+
+/* Cards */
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 200px; /* Reduced width */
+  height: 180px; /* Reduced height */
+  background: rgb(30, 161, 30);
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px; /* Reduced padding */
+  font-size: small;
+}
+
+.card svg {
+  width: 60px; /* Reduced size */
+  height: 80px; /* Reduced size */
+}
+
+.card h4 {
+  font-size: 18px; /* Reduced font size */
+  color: #000;
+  margin: 0;
+}
+
+.card p {
+  font-size: small; /* Reduced font size */
+  color: black;
+  margin: 0;
+}
+
+/* Specific Card SVG Sizes */
+.card.location svg {
+  width: 100px; /* Reduced size */
+  height: 100px; /* Reduced size */
+}
+
+.card.email svg {
+  width: 70px; /* Reduced size */
+  height: 90px; /* Reduced size */
+}
+
+.card.whatsapp svg {
+  width: 70px; /* Reduced size */
+  height: 90px; /* Reduced size */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* Reduced gap */
+  }
+
+  .logo {
+    width: 170px; /* Reduced width */
+    height: 45px; /* Reduced height */
+  }
+
+  .main-heading {
+    font-size: 32px; /* Reduced font size */
+  }
+
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 350px; /* Reduced width */
+  }
+
+  .about-text {
+    max-width: 100%;
+    padding: 0 8px; /* Reduced padding */
+  }
+
+  .link-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 85%; /* Reduced width */
+    height: auto;
+    padding: 12px; /* Reduced padding */
+  }
+
+  .card svg {
+    width: 50px; /* Reduced size */
+    height: 70px; /* Reduced size */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-address .address {
+    font-size: 16px; /* Reduced font size */
+  }
+
+  .footer-bottom h2,
+  .footer-bottom h3 {
+    font-size: 18px; /* Reduced font size */
+  }
+
+  .footer-bottom {
+    padding: 5px; /* Reduced padding */
+  }
+}
