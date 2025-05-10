@@ -3,6 +3,7 @@
   margin: 1;
   padding: 4;
   box-sizing: border-box;
+  
 }
 
 html,
@@ -25,6 +26,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  
 }
 
 
@@ -50,6 +52,7 @@ position: fixed;
 width: 100%;
 top: 0;
 left: 0;
+background-color: rgba(0, 0, 0, 0);
 z-index: 2;
 box-sizing: border-box;
 }
@@ -468,7 +471,7 @@ color: black;
     align-items: center;
     top: 60px;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0);
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -504,7 +507,7 @@ color: black;
   .top-header {
     position: fixed;
     top: 0;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0);
     height:70px;
     z-index: 1000;
   }
@@ -525,16 +528,16 @@ color: black;
   }
   /* Header Container */
 .top-header {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between; /* Distributes space between logo and nav */
   align-items: center;
-  padding: 10px 5%;
+ 
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.9);
+
   z-index: 1000;
 }
 
