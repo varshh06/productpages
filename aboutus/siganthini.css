@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  background-image: url("https://wallup.net/wp-content/uploads/2016/01/105071-macro-mushroom-nature-748x468.jpg");
+  background-image: url("background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -126,6 +126,36 @@ body {
   margin-bottom: 20px; /* Reduced margin */
   color: white;
 }
+.about-us-section {
+  font-family: Lora, serif; /* Ensure this is the font you want */
+  color: white; /* Text color */
+  padding: 20px;
+  border-radius: 8px; /* Optional for rounded corners */
+  line-height: 1.6;
+}
+
+.about-us-section p {
+  font-size: 2rem; /* Heading size */
+  text-align: center; /* Center the heading */
+  color: white;
+  margin-bottom: 15px;
+}
+
+.about-us-section ul {
+  list-style-type: none; /* Remove default list bullets */
+  padding-left: 20px; /* Indentation for list */
+}
+
+.about-us-section ul li {
+  font-size: 30px;
+  margin-bottom: 10px;
+  padding-left: 15px; /* Indentation for list items */
+}
+
+.about-us-section p:last-child {
+  font-weight: bold; /* Emphasize the last sentence */
+  color: #a3ec6b; /* A rich green color */
+}
 
 /* About Section */
 .about-section {
@@ -227,13 +257,13 @@ body {
 }
 
 .footer-bottom h2 {
-  font-size: 24px; /* Reduced font size */
+  font-size: 32px; /* Reduced font size */
   color: #fff;
   margin: 0;
 }
 
 .footer-bottom h3 {
-  font-size: 32px; /* Reduced font size */
+  font-size: 24px; /* Reduced font size */
   color: #fff;
   margin: 0;
 }
