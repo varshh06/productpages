@@ -4,7 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  height: 100%; /* Ensure html tag covers full height as well */
+  width: 100%;
+}
 html,
 body {
   font-family: "Segoe UI", sans-serif;
@@ -15,11 +18,14 @@ body {
 }
 
 body {
-  background-image: url("https://wallup.net/wp-content/uploads/2016/01/105071-macro-mushroom-nature-748x468.jpg");
+  background-image: url("background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Overlay */
@@ -28,39 +34,49 @@ body {
   min-height: fit-content;
   display: flex;
   flex-direction: column;
+  margin-top: auto;
+  padding: 0;
 }
 
 /* About Us Main Container */
 .about-us {
-  min-height: 100vh;
+  /* min-height: 50vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px; /* Reduced padding */
   overflow: hidden;
+ 
 }
 
 /* Header Section */
 .header {
+  position: static;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 12px;
+  /* background-color: white; */
+  /* background: radial-gradient(circle,rgba(44, 155, 42, 1) 0%, rgb(50, 106, 73) 54%, rgb(61, 60, 52) 140%); */
+  backdrop-filter: blur(2px);
+  z-index: 100;
 }
 
 /* Logo */
-.logo {
+/* 8.logo {
   display: flex;
   align-items: center;
-  gap: 5px; /* Reduced gap */
+  gap: 5px; 
   background: #a3ec6b;
-  border-radius: 15px 0; /* Reduced border radius */
-  width: 200px; /* Reduced width */
-  height: 50px; /* Reduced height */
-  padding: 8px; /* Reduced padding */
+  border-radius: 15px 0;
+  width: 200px; 
+  height: 50px;
+  padding: 8px;
 }
 
 .logo-img {
@@ -73,49 +89,67 @@ body {
 .logo-text {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  font-size: 22px; /* Reduced font size */
+  font-size: 22px; 
   color: #000;
-}
+} */
 
 /* Navigation Bar */
 .navbar {
   display: flex;
-  align-items: center;
   gap: 15px; /* Reduced gap */
   flex-wrap: wrap;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
+  /* font-weight: 700; */
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  align-items: flex-start;
 }
-
+.nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  align-items: flex-start;
+}
 .navbar a {
   font-size: 18px; /* Reduced font size */
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
-
+.navbar a:hover,
 .navbar a:active,
 .navbar a:focus {
   color: #a3ec6b;
 }
 
-/* Contact in Navbar */
-.contact {
-  display: flex;
-  align-items: center;
-  gap: 5px; /* Reduced gap */
-  font-size: 16px; /* Reduced font size */
-  color: white;
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  /* Or white if you have a dark background */
+  cursor: pointer;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  /* Align left */
+  /* margin-bottom: 1rem; */
 }
+
+/* Contact in Navbar */
 
 .header-phone-number {
   font-size: 16px; /* Reduced font size */
   color: white;
 }
-
+/* 
 .phone-icon {
   font-family: "Roboto", sans-serif;
-  font-size: 16px; /* Reduced font size */
-}
+  font-size: 16px; 
+} */
 
 /* Main Heading */
 .main-heading {
@@ -332,13 +366,59 @@ body {
   .navbar {
     flex-direction: column;
     align-items: center;
-    gap: 12px; /* Reduced gap */
+    align-items: flex-start;
+    position: relative;
+    gap: 12px;
+  }
+  .menu-toggle {
+    display: block;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .header {
+    flex-direction: column;
+    position: relative;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    background: transparent;
+    padding: 1rem 0;
+    position: relative;
+    top: 00%; /*push below navbar */
+    left: 0;
+    z-index: 99;
+  }
+  .nav-items.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .logo {
-    width: 170px; /* Reduced width */
-    height: 45px; /* Reduced height */
+  .nav-items a,
+  .contact {
+    width: 100%;
+    padding: 0.75rem 0;
+    font-size: 1.5rem;
+    color: white;
   }
+  /* 
+   .logo {
+    width: 170px; 
+    height: 45px; 
+  }  */
 
   .main-heading {
     font-size: 32px; /* Reduced font size */
