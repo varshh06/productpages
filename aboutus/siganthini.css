@@ -18,7 +18,7 @@ body {
 }
 
 body {
-  background-image: url("https://wallup.net/wp-content/uploads/2016/01/105071-macro-mushroom-nature-748x468.jpg");
+  background-image: url("background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -34,7 +34,7 @@ body {
   min-height: fit-content;
   display: flex;
   flex-direction: column;
-  margin-top: auto;
+  margin-top: none;
   padding: 0;
 }
 
@@ -46,7 +46,7 @@ body {
   align-items: center;
   padding: 15px; /* Reduced padding */
   overflow: hidden;
-  margin-top: 8%;
+  margin-top: none;
 }
 
 /* Header Section */
@@ -61,6 +61,7 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   padding: 12px;
+  padding-bottom: 0px;
   /* background-color: white; */
   /* background: radial-gradient(circle,rgba(44, 155, 42, 1) 0%, rgb(50, 106, 73) 54%, rgb(61, 60, 52) 140%); */
   backdrop-filter: blur(2px);
@@ -157,7 +158,8 @@ body {
   font-size: 40px; /* Reduced font size */
   font-weight: 600;
   text-align: center;
-  margin-bottom: 20px; /* Reduced margin */
+  padding-top: 3.5%;
+  margin: 22px; /* Reduced margin */
   color: white;
 }
 .about-us-section {
