@@ -694,71 +694,67 @@ color: black;
   color: white;
   font-weight: 10px;
 }
-/* Footer */
+.footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px;
+}
 .footer-centered {
   background-color: #a3ec6b;
-  font-size: 25px;
+  font-size: 20px; /* Reduced font size */
   color: #000;
   font-family: "Segoe UI", sans-serif;
   width: 100%;
-  padding: 30px 20px 10px 20px;
-  text-align: center;
-  position: relative; /* To stay within flow of the page */
-  bottom: 0; /* Ensures it's at the bottom */
-  z-index: 2;
+  padding: 20px 10px 8px 10px; /* Reduced padding */
 }
 
 .footer-flex {
-  width: 100%;
+  width: 60%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px; /* Reduced gap */
 }
 
 .footer-address {
-  min-width: 280px;
+  min-width: 260px; /* Reduced width */
 }
 
 .footer-address .address {
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 18px; /* Reduced font size */
+  line-height: 1.4; /* Reduced line height */
 }
 
 .footer-social {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 10px; /* Reduced gap */
 }
 
 .footer-social a img {
-  width: 40px;
-  height: 40px;
+  width: 35px; /* Reduced size */
+  height: 35px; /* Reduced size */
 }
 
 .footer-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
-  gap: 20px;
+  padding: 8px; /* Reduced padding */
+  gap: 10px; /* Reduced gap */
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.40);
 }
 
 .footer-bottom h2 {
-  font-size: 28px;
+  font-size: 32px; /* Reduced font size */
   color: #fff;
-  margin: 5;
-  align-items: center;
+  margin: 0;
 }
 
 .footer-bottom h3 {
-  align-items: center;
-  font-size: 42px;
+  font-size: 24px; /* Reduced font size */
   color: #fff;
   margin: 0;
 }
@@ -780,138 +776,46 @@ color: black;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  width: 226px;
-  height: 209px;
+  width: 200px; /* Reduced width */
+  height: 180px; /* Reduced height */
   background: rgb(30, 161, 30);
   text-align: center;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   font-size: small;
 }
 
 .card svg {
-  width: 78px;
-  height: 110px;
-  object-fit: contain;
+  width: 60px; /* Reduced size */
+  height: 80px; /* Reduced size */
 }
 
 .card h4 {
-  font-size: 20px;
+  font-size: 18px; /* Reduced font size */
   color: #000;
   margin: 0;
 }
 
 .card p {
-  font-size: medium;
+  font-size: small; /* Reduced font size */
   color: black;
   margin: 0;
 }
 
 /* Specific Card SVG Sizes */
 .card.location svg {
-  width: 120px;
-  height: 120px;
+  width: 100px; /* Reduced size */
+  height: 100px; /* Reduced size */
 }
 
 .card.email svg {
-  width: 80px;
-  height: 100px;
+  width: 70px; /* Reduced size */
+  height: 90px; /* Reduced size */
 }
 
 .card.whatsapp svg {
-  width: 78px;
-  height: 110px;
+  width: 70px; /* Reduced size */
+  height: 90px; /* Reduced size */
 }
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .logo {
-    width: 180px;
-    height: 50px;
-  }
-
-  .main-heading {
-    font-size: 40px;
-  }
-
-  .about-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-image img {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .about-text {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .link-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 80%;
-    height: auto;
-    padding: 16px;
-  }
-
-  .card svg {
-    width: 60px;
-    height: 80px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .navbar a {
-    font-size: 18px;
-  }
-
-  .main-heading {
-    font-size: 36px;
-  }
-
-  .footer {
-    padding: 8px;
-    gap: 12px;
-  }
-
-  .footer h2 {
-    font-size: 20px;
-  }
-
-  .footer h3 {
-    font-size: 28px;
-  }
-
-  .card {
-    width: 90%;
-    padding: 12px;
-    height: auto;
-  }
-
-  .card svg {
-    display: none;
-  }
-
-  .card h4 {
-    font-size: 24px;
-  }
-
-  .card p {
-    font-size: 18px;
-  }
-}
-
 
 
