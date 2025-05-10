@@ -1,41 +1,32 @@
+/* Reset and Global Styles */
+* {
+  margin: 1;
+  padding: 4;
+  box-sizing: border-box;
+}
+
+html,
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  
+  box-sizing: border-box;
+  color: #ffffff;
 }
-
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-  
-
-
-.background {
-  background: url('https://wallup.net/wp-content/uploads/2016/01/105071-macro-mushroom-nature-748x468.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 100vh;
-  width: 100vw;
-  position: relative;
-  z-index: 1;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  min-height: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding:0px 20px 20px 20px;
-  box-sizing: border-box;    
-  mix-blend-mode: darken;
 }
+body {
+  background-image: url("https://wallup.net/wp-content/uploads/2016/01/105071-macro-mushroom-nature-748x468.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 
 .background::before {
   content: "";
@@ -44,7 +35,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0); 
   z-index: -1;
 }
 
@@ -142,16 +133,18 @@ fill: white;
 .product-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
-  max-width: 1000px;
+  gap: 60px;
+  max-width: 10000px;
   background: transparent;
-  padding: 50px;
-  padding-top: 150px; /* ← Added this line */
+  padding: 100px;
+  /* ← Added this line */
   border-radius: 10px;
   width: 100%;
   color: white;
   z-index: 2;
+  margin-top: 100px;
   box-sizing: border-box;
+  padding-top: 40px;
 }
 
 
@@ -219,14 +212,15 @@ fill: white;
 }
 
 .buy-button {
-  display: flex;
+   display: flex;
   justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  align-items: flex-start; /* Center content vertically */
   gap: 5px;
-  padding: 12px 0; /* Equal padding on sides */
+  align-content: flex-start;
+  padding: 20px 10px; /* Equal padding on sides */
   width: 100%; /* Full width of container */
-  max-width: 400px; /* Maximum width */
-  margin: 20px auto; /* Center button horizontally */
+  max-width: 500px; /* Maximum width */
+  margin: 20px 20px; /* Center button horizontally */
   background-color: #8BDD18;
   border: none;
   border-radius: 20px;
@@ -245,8 +239,8 @@ fill: white;
   display: flex;
   align-items: center;
   gap: 8px;
-  width: 160px;
-  height: 20px;
+  width: 180px;
+  height: 40px;
   padding: 12px;
   background-color: #A3EC6B;
   border-radius: 20px 0px 20px 0px;
@@ -694,67 +688,71 @@ color: black;
   color: white;
   font-weight: 10px;
 }
-.footer {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 8px;
-}
+/* Footer */
 .footer-centered {
   background-color: #a3ec6b;
-  font-size: 20px; /* Reduced font size */
+  font-size: 25px;
   color: #000;
   font-family: "Segoe UI", sans-serif;
   width: 100%;
-  padding: 20px 10px 8px 10px; /* Reduced padding */
+  padding: 30px 20px 10px 20px;
+  text-align: center;
+  position: relative; /* To stay within flow of the page */
+  bottom: 0; /* Ensures it's at the bottom */
+  z-index: 2;
 }
 
 .footer-flex {
-  width: 60%;
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 15px; /* Reduced gap */
+  gap: 20px;
 }
 
 .footer-address {
-  min-width: 260px; /* Reduced width */
+  min-width: 280px;
 }
 
 .footer-address .address {
-  font-size: 18px; /* Reduced font size */
-  line-height: 1.4; /* Reduced line height */
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .footer-social {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Reduced gap */
+  gap: 15px;
 }
 
 .footer-social a img {
-  width: 35px; /* Reduced size */
-  height: 35px; /* Reduced size */
+  width: 40px;
+  height: 40px;
 }
 
 .footer-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px; /* Reduced padding */
-  gap: 10px; /* Reduced gap */
+  padding: 15px;
+  gap: 20px;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.40);
 }
 
 .footer-bottom h2 {
-  font-size: 32px; /* Reduced font size */
+  font-size: 28px;
   color: #fff;
-  margin: 0;
+  margin: 5;
+  align-items: center;
 }
 
 .footer-bottom h3 {
-  font-size: 24px; /* Reduced font size */
+  align-items: center;
+  font-size: 42px;
   color: #fff;
   margin: 0;
 }
@@ -776,46 +774,135 @@ color: black;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  width: 200px; /* Reduced width */
-  height: 180px; /* Reduced height */
+  width: 226px;
+  height: 209px;
   background: rgb(30, 161, 30);
   text-align: center;
   border-radius: 10px;
-  padding: 15px; /* Reduced padding */
+  padding: 20px;
   font-size: small;
 }
 
 .card svg {
-  width: 60px; /* Reduced size */
-  height: 80px; /* Reduced size */
+  width: 78px;
+  height: 110px;
+  object-fit: contain;
 }
 
 .card h4 {
-  font-size: 18px; /* Reduced font size */
+  font-size: 20px;
   color: #000;
   margin: 0;
 }
 
 .card p {
-  font-size: small; /* Reduced font size */
+  font-size: medium;
   color: black;
   margin: 0;
 }
 
 /* Specific Card SVG Sizes */
 .card.location svg {
-  width: 100px; /* Reduced size */
-  height: 100px; /* Reduced size */
+  width: 120px;
+  height: 120px;
 }
 
 .card.email svg {
-  width: 70px; /* Reduced size */
-  height: 90px; /* Reduced size */
+  width: 80px;
+  height: 100px;
 }
 
 .card.whatsapp svg {
-  width: 70px; /* Reduced size */
-  height: 90px; /* Reduced size */
+  width: 78px;
+  height: 110px;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 
+  .logo {
+    width: 180px;
+    height: 50px;
+  }
+
+  .main-heading {
+    font-size: 40px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .about-text {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .link-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    height: auto;
+    padding: 16px;
+  }
+
+  .card svg {
+    width: 60px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar a {
+    font-size: 18px;
+  }
+
+  .main-heading {
+    font-size: 36px;
+  }
+
+  .footer {
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .footer h2 {
+    font-size: 20px;
+  }
+
+  .footer h3 {
+    font-size: 28px;
+  }
+
+  .card {
+    width: 90%;
+    padding: 12px;
+    height: auto;
+  }
+
+  .card svg {
+    display: none;
+  }
+
+  .card h4 {
+    font-size: 24px;
+  }
+
+  .card p {
+    font-size: 18px;
+  }
+}
