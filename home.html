@@ -27,6 +27,9 @@ width: 100%;
 }
 
 .header {
+  position: fixed;
+    top: 0;
+      left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -35,9 +38,10 @@ width: 100%;
     flex-wrap: wrap;
     gap: 20px;
     padding: 12px;
+    /* background-color: white; */
     /* background: radial-gradient(circle,rgba(44, 155, 42, 1) 0%, rgb(50, 106, 73) 54%, rgb(61, 60, 52) 140%); */
     backdrop-filter: blur(2px);
-    
+    z-index: 100;
 }
 .heading{
     position: relative;
@@ -145,7 +149,7 @@ width: 100%;
 
     .card-container {
       width: 100%;
-      color: #000;
+      color: white;
       padding: 10px;
       display: flex;
       justify-content: center;
@@ -155,7 +159,7 @@ width: 100%;
     }
 
     .wrapper {
-      background-image: url('mushroom-4994622.jpg');
+      /* background-image: url(https://www.markys.com/media/wysiwyg/mushrooms.jpg); */
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -165,6 +169,7 @@ width: 100%;
       top: 0;
       left: 0;
       z-index: -1;
+       justify-content: center;
     }
 
     .wrapper::before {
@@ -172,12 +177,15 @@ width: 100%;
       position: absolute;
       inset: 0;
       background-color: rgba(0,0,0,0.5);
+        justify-content: center;
+      text-align: center;
+      align-items: center;
     }
 
     .card {
       background-color: #8BDD18;
       width: 250px;
-      height: 300px;
+      height: 100px;
       padding: 20px;
       opacity: 0;
       transform: translateX(-100px);
@@ -189,6 +197,7 @@ width: 100%;
       transition: all 0.3s ease;
       max-width: 300px;
       position: relative;
+       text-align: center;
     }
 
     .card:hover {
@@ -198,9 +207,12 @@ width: 100%;
 
     h2 {
       text-align: center;
-      font-size: 2rem;
+      font-size: 2.8rem;
       padding: 20px 0;
       color: white;
+      position: relative;
+      margin-bottom: 5%;
+    
     }
 
     .card .content {
@@ -211,22 +223,36 @@ width: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      align-content: center;
+       text-align: center;
+       margin-top: 50%;
     }
 
     .content h3 {
       font-size: 1.2rem;
       margin: 10px 0;
       transition: 0.3s ease;
+      align-content: center;
+      color: white;
+       text-align: center;
     }
 
     .content p {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content:center;
+      text-align: center;
+      color: white;
       transition: 0.3s ease;
+      
     }
 
     .card::before,
     .card::after {
       content: '';
       position: absolute;
+      margin-top: 0;
       width: 80px;
       height: 3px;
       background: linear-gradient(145deg, #8BDD18, #00FFA3, #006400);
@@ -243,13 +269,15 @@ width: 100%;
 
     .card:hover h3,
     .card:hover p {
+      color: white;
       transform: scale(1.1);
     }
-
     .show {
       opacity: 1;
       transform: translate(0);
     }
+
+
     .footer-centered {
     background-color: #a3ec6b;
     font-size: 25px;
@@ -321,6 +349,7 @@ width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     gap: 10px;
     width: 100%;
     height: auto;
@@ -334,14 +363,43 @@ width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    align-content: center;
     gap: 10px;
-    width: 226px;
-    height: 209px;
-    background: rgb(30, 161, 30);
+    width: 250px;
+    height: 409px;
+    /* background: url(https://www.markys.com/media/wysiwyg/mushrooms.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; */
     text-align: center;
     border-radius: 10px;
     padding:20px;
     font-size: small;
+}
+#card1{
+ background: url(https://www.markys.com/media/wysiwyg/mushrooms.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+   
+}
+#card2{
+ background: url(https://mushroominfo.co.za/wp-content/uploads/2021/03/AxHTx3Zg-1200x852.jpeg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+   
+}
+#card3{
+ background: url(https://img.freepik.com/premium-photo/organic-fresh-mushrooms-closeup-field-ecofriendly-products-generative-ai_655310-13501.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+   
 }
 
 /* Card SVG Icons */
@@ -493,7 +551,7 @@ width: 100%;
   }
     .card {
         width: 100%;
-        height: 250px;
+        height: 280px;
       }
 
       .master-con {
@@ -506,307 +564,9 @@ width: 100%;
       display: flex;
     padding: 3rem 1rem 1.5rem;
     font-size: 1.6rem;
-    
     } 
-    /* .small-txt{
-       
-    } */
     } 
-     /* @media  (max-width: 375px){ 
-        .card-container {
-        flex-direction: column;
-      }  
-      .header{
-        margin-top: -2%;
-        position: relative;
-        margin-bottom: -10%;
-    }
-    .style-button{
-        position: absolute;
-        top: 500%;
-        width: 348px;
-        height: 68px;
-    } 
-      .heading {
-    height:500vh;
-    padding: 3rem 1rem 1.5rem;
-    font-size: 1.6rem;
-    text-align: center;
-    }
-    .heading h1 {
-    position: relative;
-    
-    top: 500%;
-    padding: 3rem 1rem 1.5rem;
-    font-size: 3rem;
- 
-  }
-
-  .small-txt {
-  top: 500px; 
-    font-size: 1.1rem;
-    padding: 0 1rem;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-  }
-
-  .navbar {
-    padding: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-
-  }
-
-  .menu-toggle {
-    display: block;
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 1rem;
-  }
-
-  .nav-items {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    background:transparent ;
-    
-    padding: 1rem 0;
-    position: absolute;
-    top: 70%;  push below navbar 
-      left: 0; 
-    z-index: 99;
-    text-align: center;
- 
-  }
-
-  .nav-items.active {
-    display: flex;
-  }
-
-  .nav-items a,
-  .contact {
-    width: 100%;
-    padding: 0.75rem 0;
-    font-size: 1.5rem;
-    color: white;
-  }
-    .card {
-        width: 100%;
-        height: 250px;
-      }
-
-      .master-con {
-        height: auto;
-        padding-top: 100px;
-        padding-bottom: 30px;
-      }  
-      .heading{
-      margin-top: 5.5rem;
-      display: flex;
-    padding: 3rem 1rem 1.5rem;
-    font-size: 1.6rem;
-    
-    }  
-
-
-
-
-    }  */
-
-
-
-
-    /* @media (min-width: 769px) and (max-width: 1024px) {
-  .card-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .navbar {
-    padding: 1.5rem 2rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo {
-    font-size: 1.8rem;
-  }
-
-  .menu-toggle {
-    display: none;
-  }
-
-  .nav-items {
-    display: flex !important;
-    flex-direction: row;
-    position: static;
-    width: auto;
-    background: none;
-    justify-content: flex-end;
-    gap: 2rem;
-  }
-
-  .nav-items a,
-  .contact {
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-  }
-
-  .heading {
-    height: auto;
-    font-size: 2rem;
-    padding: 4rem 2rem 2rem;
-    display: block;
-    text-align: center;
-  }
-
-  .heading h1 {
-    font-size: 4rem;
-    padding: 1rem 0;
-  }
-
-  .small-txt {
-    position: static;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    text-align: center;
-  }
-
-  .card {
-    width: 45%;
-    height: 300px;
-    margin: 1rem 0;
-  }
-
-  .master-con {
-    padding-top: 100px;
-    padding-bottom: 50px;
-  }
-
-  .style-button {
-    width: 400px;
-    height: 70px;
-  }
-} */
-
-
-/* ===================== */
-/* ==== MOBILE (<= 768px) ==== */
-/* ===================== */
-/* @media (max-width: 768px) {
-  .card-container {
-    flex-direction: column;
-  }
-
-  .header {
-    margin-top: -2%;
-    position: relative;
-  }
-
-  .style-button {
-    position: absolute;
-    top: 100%;
-    width: 348px;
-    height: 68px;
-  }
-
-  .heading {
-    height: 50vh;
-    padding: 3rem 1rem 1.5rem;
-    font-size: 1.6rem;
-    text-align: center;
-    display: flex;
-  }
-
-  .heading h1 {
-    position: relative;
-    top: 30%;
-    padding: 3rem 1rem 1.5rem;
-    font-size: 3rem;
-  }
-
-  .small-txt {
-    position: absolute;
-    top: 95%;
-    font-size: 1.1rem;
-    padding: 0 1rem;
-    text-align: center;
-    display: flex;
-  }
-
-  .navbar {
-    padding: 1rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 100;
-  }
-
-  .logo {
-    flex: 1;
-    text-align: left;
-    color: white;
-    font-size: 1.5rem;
-  }
-
-  .menu-toggle {
-    display: block;
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    margin: 0;
-  }
-
-  .nav-items {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(6px);
-    padding: 1rem 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 99;
-    text-align: center;
-  }
-
-  .nav-items.active {
-    display: flex;
-  }
-
-  .nav-items a,
-  .contact {
-    width: 100%;
-    padding: 0.75rem 0;
-    font-size: 1.5rem;
-    color: white;
-  }
-
-  .card {
-    width: 100%;
-    height: 250px;
-  }
-
-  .master-con {
-    height: auto;
-    padding-top: 100px;
-    padding-bottom: 30px;
-  }
-} */
+   
   </style>
 </head>
 <body>
@@ -842,9 +602,10 @@ width: 100%;
             <button class="menu-toggle" id="menu-toggle">&#9776;</button>
             <div class="nav-items" id="nav-items">
             <a href="#"><b>Home</b></a>
-            <a href="https://varshh06.github.io/productpages/aboutus/ABOUT US.html"><b>About Us</b></a>
+            <a href="#"><b>About Us</b></a>
             <a href="https://varshh06.github.io/productpages/products/index.html"><b>Products</b></a>
-            <a href="#"><b>Languages</b></a>
+            <a href="#" ><b>Languages</b></a>
+            
             <div class="contact">
               <span class="phone-icon"><b><svg width="20" height="20" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.72 3.38889C4.8 4.67444 5 5.93111 5.32 7.13L3.72 8.86333C3.17333 7.13 2.82667 5.29556 2.70667 3.38889H4.72ZM17.8667 20.7511C19 21.0978 20.16 21.3144 21.3333 21.4011V23.5533C19.5733 23.4233 17.88 23.0478 16.2667 22.47L17.8667 20.7511ZM6 0.5H1.33333C0.6 0.5 0 1.15 0 1.94444C0 15.5078 10.1467 26.5 22.6667 26.5C23.4 26.5 24 25.85 24 25.0556V20.0144C24 19.22 23.4 18.57 22.6667 18.57C21.0133 18.57 19.4 18.2811 17.9067 17.7467C17.7733 17.6889 17.6267 17.6744 17.4933 17.6744C17.1467 17.6744 16.8133 17.8189 16.5467 18.0933L13.6133 21.2711C9.84 19.1767 6.74667 15.84 4.82667 11.7522L7.76 8.57444C8.13333 8.17 8.24 7.60667 8.09333 7.10111C7.6 5.48333 7.33333 3.75 7.33333 1.94444C7.33333 1.15 6.73333 0.5 6 0.5Z" fill="white"/>
@@ -854,6 +615,8 @@ width: 100%;
         </div>            
           </nav>
         </div>
+        
+ 
    
         <div class="heading" >
             <h1 class="res">
@@ -868,7 +631,10 @@ width: 100%;
         </div>
 
 <div style="height: 30vh; display: flex; justify-content: center; align-items: center;">
-    <button class="style-button" onclick="https://varshh06.github.io/productpages/products/index.html">Explore Our Products</button>
+   <button class="style-button" onclick="window.location.href='https://varshh06.github.io/productpages/products/index.html';">
+    Explore Our Products
+</button>
+
   </div>
 
   <!-- Second Section from index.html -->
@@ -877,25 +643,25 @@ width: 100%;
       <h2>Why Do You Choose Lucky Farm</h2>
     </span>
     <div class="card-container">
-      <div class="card card1">
+      <div class="card card1" id="card1">
         <div class="wrapper"></div>
         <div class="content">
           <h3>Rich in Nutrients</h3>
-          <p>Our mushrooms are loaded with essential vitamins and minerals that boost your immune system and energy levels.</p>
+          <p style="color: white;">Our mushrooms are loaded with essential vitamins and minerals that boost your immune system and energy levels.</p>
         </div>
       </div>
-      <div class="card card2">
+      <div class="card card2" id="card2">
         <div class="wrapper"></div>
         <div class="content">
           <h3>Sustainably Grown</h3>
-          <p>Our eco-friendly farming methods protect the environment and ensure long-term sustainability.</p>
+          <p style="color: white;">Our eco-friendly farming methods protect the environment and ensure long-term sustainability.</p>
         </div>
       </div>
-      <div class="card card3">
+      <div class="card card3" id="card3">
         <div class="wrapper"></div>
         <div class="content">
           <h3>Organic & Fresh</h3>
-          <p>We cultivate mushrooms using 100% organic methods, ensuring freshness and purity in every bite.</p>
+          <p style="color: white;">We cultivate mushrooms using 100% organic methods, ensuring freshness and purity in every bite.</p>
         </div>
       </div>
     </div>
@@ -915,8 +681,8 @@ width: 100%;
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/77c68037065e5603aa3c8b23dc4617334d6c70a1?placeholderIfAbsent=true" alt="Email icon" loading="lazy">
             <h4>Email</h4>
             <address>
-                <a href="mailto:rsujathaa1977@gmail.com ">
-                    rsujathaa1977@gmail.com 
+                <a href="mailto:arulkaruppu8@gmail.com">
+                    arulkaruppu8@gmail.com
                 </a>
             </address>
         </article>
@@ -1107,23 +873,4 @@ width: 100%;
 
   <script>
     // Animate cards on scroll
-    const cards = document.querySelectorAll('.card');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show');
-        }
-      });
-    }, { threshold: 0.5 });
-
-    cards.forEach(card => observer.observe(card));
-  </script>
-<script>
-    document.getElementById('menu-toggle').addEventListener('click', function () {
-      document.getElementById('nav-items').classList.toggle('active');
-    });
-  </script>
-</body>
-</html>
+    const cards = d
