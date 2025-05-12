@@ -18,7 +18,7 @@ body {
 }
 
 body {
-  background-image: url("background (1).jpg");
+  background-image: url("background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -58,10 +58,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
   flex-wrap: wrap;
   gap: 20px;
   padding: 12px;
-  padding-bottom: 0px;
   /* background-color: white; */
   /* background: radial-gradient(circle,rgba(44, 155, 42, 1) 0%, rgb(50, 106, 73) 54%, rgb(61, 60, 52) 140%); */
   backdrop-filter: blur(2px);
@@ -97,15 +97,16 @@ body {
 /* Navigation Bar */
 .navbar {
   display: flex;
-  gap: 15px; /* Reduced gap */
   flex-wrap: wrap;
-  font-family: Arial, Helvetica, sans-serif;
-  /* font-weight: 700; */
+  gap: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  /* align-items: center;  */
   flex-direction: column;
   text-align: center;
   position: relative;
   align-items: flex-start;
 }
+
 .nav-items {
   display: flex;
   flex-wrap: wrap;
@@ -114,12 +115,26 @@ body {
   gap: 1rem;
   align-items: flex-start;
 }
+
 .navbar a {
-  font-size: 18px; /* Reduced font size */
   color: white;
   text-decoration: none;
+  font-size: 1.4rem;
   transition: color 0.3s ease;
 }
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active {
+  color: rgba(163, 236, 107, 1);
+}
+.phone-icon:hover {
+  color: rgba(163, 236, 107, 1);
+  fill: red;
+  padding-left: 0%;
+  margin: 0px;
+}
+
 .navbar a:hover,
 .navbar a:active,
 .navbar a:focus {
