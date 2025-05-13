@@ -7,9 +7,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+
 
   <style>
     /* === Merged style.css === */
+    body.translated-fixed .navbar {
+  top: 40px; /* Adjust based on the height of the Google Translate bar */
+}
+ html body .goog-te-banner-frame,
+  html body .goog-te-banner-frame.skiptranslate {
+    top: 0!important;
+    z-index: 99999 !important;
+  }
+
     body {
   background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/a28a01382f94207a30d759345a334da1cce54f21?placeholderIfAbsent=true'); /* Adjust this to a relative path */
   background-size: cover;
@@ -18,6 +30,7 @@
   background-attachment: fixed; /* Keeps the background image fixed during scrolling */
   margin: 0;
   padding: 0;
+  transition: padding-top 0.3s ease;
   font-family: 'Rubik', sans-serif;
   height: 100%; /* Make sure the body covers the full height */
 }
@@ -27,9 +40,9 @@ width: 100%;
 }
 
 .header {
-  position: fixed;
+     position: fixed;
     top: 0;
-      left: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -38,10 +51,9 @@ width: 100%;
     flex-wrap: wrap;
     gap: 20px;
     padding: 12px;
-    /* background-color: white; */
-    /* background: radial-gradient(circle,rgba(44, 155, 42, 1) 0%, rgb(50, 106, 73) 54%, rgb(61, 60, 52) 140%); */
     backdrop-filter: blur(2px);
-    z-index: 100;
+    z-index: 9999;
+    transition: top 0.3s ease;
 }
 .heading{
     position: relative;
@@ -699,6 +711,11 @@ width: 100%;
     <p>© 2025 Lucky Farm. All rights reserved.</p>
 </footer>
 <style>
+    html body .goog-te-banner-frame,
+    html body .goog-te-banner-frame.skiptranslate,
+    html body body {
+      top: 0 !important;
+    }
     * {
         margin: 0;
         padding: 0;
@@ -891,13 +908,99 @@ width: 100%;
       document.getElementById('nav-items').classList.toggle('active');
     });
   </script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+
+<!-- Google Translate Script -->
+<!-- Cookie handling & language apply FIRST -->
+<script>
+  // Set default language based on cookie (before Google loads)
+  (function() {
+    var lang = (document.cookie.match(/(^|;\s*)googtrans=\/en\/(\w+)/) || [])[2];
+    if (lang) {
+      var newCookie = "/en/" + lang;
+      document.cookie = "googtrans=" + newCookie + ";path=/";
+      document.cookie = "googtrans=" + newCookie + ";path=/;domain=" + location.hostname;
+    }
+  })();
+</script>
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,ta',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    }, 'google_translate_element');
+  }
+</script>
 
 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<script>
+  // Save user-selected language to cookie
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new MutationObserver(() => {
+      const iframe = document.querySelector('iframe.goog-te-menu-frame');
+      if (iframe) {
+        try {
+          const items = iframe.contentDocument.querySelectorAll('.goog-te-menu2-item span.text');
+          items.forEach(span => {
+            span.addEventListener('click', function() {
+              const lang = span.innerText.toLowerCase().includes("tamil") ? 'ta' : 'en';
+              const val = '/en/' + lang;
+              document.cookie = 'googtrans=' + val + ';path=/';
+              document.cookie = 'googtrans=' + val + ';path=/;domain=' + location.hostname;
+            });
+          });
+        } catch (err) {
+          console.warn("Translate frame error", err);
+        }
+      }
+    });
 
-</body>
-</html>
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>
 
+<script>
+  const navbarToggle = document.getElementById("navbar-toggle");
+  const navbar = document.getElementById("navbar");
+
+  navbarToggle.addEventListener("click", () => {
+    navbar.classList.toggle("open");
+  });
+</script>
+
+<script>
+  function setHeaderOffset(isTranslated) {
+    const header = document.querySelector(".header");
+    if (isTranslated) {
+      header.style.top = "25px";
+      document.body.style.paddingTop = `${header.offsetHeight + 15}px`;
+    } else {
+      header.style.top = "0px";
+      document.body.style.paddingTop = `${header.offsetHeight}px`;
+    }
+  }
+
+  function observeTranslate() {
+    const observer = new MutationObserver(() => {
+      const isTranslated = document.documentElement.classList.contains("translated-ltr") ||
+                           document.documentElement.classList.contains("translated-rtl");
+      setHeaderOffset(isTranslated);
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+  }
+
+  window.addEventListener("load", observeTranslate);
+</script>
 
 
 </body>
