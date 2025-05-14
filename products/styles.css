@@ -5,7 +5,43 @@
   padding: 0;
   box-sizing: border-box;
 }
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-weight: 700;
+}
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.translate-select {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#google_translate_element {
+  position: static;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+    body.translated-fixed .navbar {
+  top: 40px; /* Adjust based on the height of the Google Translate bar */
+}
+ html body .goog-te-banner-frame,
+  html body .goog-te-banner-frame.skiptranslate {
+    top: 0!important;
+    z-index: 0 !important;
+  }
 body {
   font-family: "Segoe UI", sans-serif;
   background-image: url("background.jpg");
@@ -17,14 +53,15 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: auto;
-  justify-content: space-between;
-  gap: 300px;
+  min-height: 100vh;
+  gap: 0; /* ✅ Remove unnecessary gap */
+  margin: 0;
 }
 
+
 .overlay {
+  flex: 1; /* Pushes footer down */
   background-color: rgba(0, 0, 0, 0.6);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -36,14 +73,22 @@ body {
   align-items: center;
   padding: 20px 30px;
   overflow: hidden;
+  padding-bottom: 100px;
+   padding-top: 100px; 
 }
 
 .header {
+  position: fixed;              /* Sticks to top */
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Logo on left, nav on right */
   align-items: center;
-  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Optional dark background */
+  z-index: 1000;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -141,9 +186,12 @@ body {
 .product-price {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Stack vertically */
+  gap: 10px;              /* Add spacing between price and button */
+  align-items: center;    /* Center align items */
 }
+
+
 
 .price {
   font-size: 20px;
@@ -204,24 +252,17 @@ body {
   height: 40px;
 }
 
-.footer-bottom {
-  text-align: center;
-  font-size: 18px;
-  color: #fff;
-  margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-}
+
 .footer-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8.95px;
+  padding: 20px;
   gap: 16px;
   width: 100%;
-  height: auto;
-  /* background-color: #A3EC6B; */
-  position: absolute;
-  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: static; /* Allow it to flow naturally */
+  margin-top: 40px; /* Ensures spacing after tall content */
 }
 
 /* Headings */
@@ -263,8 +304,8 @@ body {
   border-radius: 10px;
   padding: 20px;
   font-size: small;
+  margin-bottom: 20px; /* Add margin to prevent overlapping */
 }
-
 /* Card SVG Icons */
 .card svg {
   width: 78px;
@@ -335,10 +376,17 @@ body {
     align-items: center;
   }
 
-  .footer-bottom {
-    position: static;
-    margin-top: 30px;
-  }
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 16px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: static; /* Allow it to flow naturally */
+  margin-top: 40px; /* Ensures spacing after tall content */
+}
 
   .link-container {
     flex-direction: column;
@@ -429,4 +477,10 @@ body {
     width: 100%;
     font-size: 16px;
   }
+}
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0 !important;
 }
