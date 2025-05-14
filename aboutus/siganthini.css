@@ -493,3 +493,30 @@ body {
     padding: 5px; /* Reduced padding */
   }
 }
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
+
+
+
+#google_translate_element select {
+  font-size: 16px;           /* Larger text */
+  padding: 10px 14px;        /* More padding */
+  border-radius: 8px;        /* Rounded corners */
+  border: 1px solid #ccc;    /* Subtle border */
+  background-color: #fff;    /* Clean background */
+  color: #000;               /* Text color */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Light shadow */
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+#google_translate_element select:hover {
+  border-color: #4CAF50;     /* Green border on hover */
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
