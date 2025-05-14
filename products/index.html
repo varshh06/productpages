@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
     <link rel="stylesheet" href="styles.css" />
- 
-   
+     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div class="overlay">
@@ -16,16 +15,23 @@
             <img src="logo.jpg" alt="Logo" class="logo-img" />
             <h1 class="logo-text">Lucky Farm</h1>
           </div>
-          <nav class="navbar">
-            <a href="https://varshh06.github.io/productpages/home.html">Home</a>
-            <a href="https://varshh06.github.io/productpages/aboutus/ABOUT US.html">About Us</a>
-                <a href="https://varshh06.github.io/productpages/products/index.html">Products</a>
-            
-            <div class="contact">
-              <span class="phone-icon">📞</span>
-              <a href="tel:+919842583652" style="color: white; text-decoration: none;">+91 9842583652</a>
-            </div>            
-          </nav>
+      <nav class="navbar">
+  <a href="https://varshh06.github.io/productpages/home.html">Home</a>
+  <a href="https://varshh06.github.io/productpages/aboutus/ABOUT US.html">About Us</a>
+  <a href="https://varshh06.github.io/productpages/products/index.html">Products</a>
+
+  <!-- New wrapper for language + contact -->
+  <div class="nav-right">
+    <div id="google_translate_element" class="translate-select"></div>
+    <div class="contact">
+      <span class="phone-icon">📞</span>
+      <a href="tel:+919842583652" style="color: white; text-decoration: none;">
+        +91 9842583652
+      </a>
+    </div>
+  </div>
+</nav>
+
         </div>
 
         <div class="products-container">
@@ -134,8 +140,101 @@
           <p>© 2025 Lucky Farm. All rights reserved.</p>
         </div>
       </footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
 
-      
+<!-- Google Translate Script -->
+<!-- Cookie handling & language apply FIRST -->
+<script>
+  // Set default language based on cookie (before Google loads)
+  (function() {
+    var lang = (document.cookie.match(/(^|;\s*)googtrans=\/en\/(\w+)/) || [])[2];
+    if (lang) {
+      var newCookie = "/en/" + lang;
+      document.cookie = "googtrans=" + newCookie + ";path=/";
+      document.cookie = "googtrans=" + newCookie + ";path=/;domain=" + location.hostname;
+    }
+  })();
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,ta',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    }, 'google_translate_element');
+  }
+</script>
+
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  // Save user-selected language to cookie
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new MutationObserver(() => {
+      const iframe = document.querySelector('iframe.goog-te-menu-frame');
+      if (iframe) {
+        try {
+          const items = iframe.contentDocument.querySelectorAll('.goog-te-menu2-item span.text');
+          items.forEach(span => {
+            span.addEventListener('click', function() {
+              const lang = span.innerText.toLowerCase().includes("tamil") ? 'ta' : 'en';
+              const val = '/en/' + lang;
+              document.cookie = 'googtrans=' + val + ';path=/';
+              document.cookie = 'googtrans=' + val + ';path=/;domain=' + location.hostname;
+            });
+          });
+        } catch (err) {
+          console.warn("Translate frame error", err);
+        }
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+
+<script>
+  const navbarToggle = document.getElementById("navbar-toggle");
+  const navbar = document.getElementById("navbar");
+
+  navbarToggle.addEventListener("click", () => {
+    navbar.classList.toggle("open");
+  });
+</script>
+
+<script>
+  function setHeaderOffset(isTranslated) {
+    const header = document.querySelector(".header");
+    if (isTranslated) {
+      header.style.top = "30px";  // Adjust this value as needed
+      document.body.style.paddingTop = `${header.offsetHeight + 15}px`;
+    } else {
+      header.style.top = "0px";
+      document.body.style.paddingTop = `${header.offsetHeight}px`;
+    }
+  }
+
+  function observeTranslate() {
+    const observer = new MutationObserver(() => {
+      const isTranslated = document.documentElement.classList.contains("translated-ltr") ||
+                           document.documentElement.classList.contains("translated-rtl");
+      setHeaderOffset(isTranslated);
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+  }
+
+  window.addEventListener("load", observeTranslate);
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
   </body>
   
   
