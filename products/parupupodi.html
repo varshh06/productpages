@@ -13,28 +13,38 @@
   <div class="main-content">
     <div class="background">
       <div class="overlay">
-      <header class="top-header">
-        <div class="lucky-farm-badge">
-          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-          <img src="images/logo.png" alt="Lucky Farm Logo" />
-          <span>Lucky Farm</span>
-        </div>
-        <nav class="nav-links">
-          <a href="https://varshh06.github.io/productpages/home.html">Home</a>
-          <a href="https://varshh06.github.io/productpages/aboutus/ABOUT US.html"class="active">About Us</a>
-          <a href="https://varshh06.github.io/productpages/products/index.html"class="active">Products</a>
-          <div class="contact">
-            <a href="tel:+919842583652" class="phone-link">
-              <svg class="phone-icon" width="20" height="18" viewBox="0 0 24 27" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.72 3.38889C4.8 4.67444 5 5.93111 5.32 7.13L3.72 8.86333C3.17333 7.13 2.82667 5.29556 2.70667 3.38889H4.72ZM17.8667 20.7511C19 21.0978 20.16 21.3144 21.3333 21.4011V23.5533C19.5733 23.4233 17.88 23.0478 16.2667 22.47L17.8667 20.7511ZM6 0.5H1.33333C0.6 0.5 0 1.15 0 1.94444C0 15.5078 10.1467 26.5 22.6667 26.5C23.4 26.5 24 25.85 24 25.0556V20.0144C24 19.22 23.4 18.57 22.6667 18.57C21.0133 18.57 19.4 18.2811 17.9067 17.7467C17.7733 17.6889 17.6267 17.6744 17.4933 17.6744C17.1467 17.6744 16.8133 17.8189 16.5467 18.0933L13.6133 21.2711C9.84 19.1767 6.74667 15.84 4.82667 11.7522L7.76 8.57444C8.13333 8.17 8.24 7.60667 8.09333 7.10111C7.6 5.48333 7.33333 3.75 7.33333 1.94444C7.33333 1.15 6.73333 0.5 6 0.5Z" fill=""/>
-              </svg>
-              <span class="header-phone-number">+91 9842583652</span>
-            </a>
-          </div>
-        </nav>
-      </header>
-  
-  
+       <header class="top-header">
+  <!-- Logo Left -->
+  <div class="logo lucky-farm-badge">
+    <img src="images/logo.png" alt="Lucky Farm Logo" />
+    <span>Lucky Farm</span>
+  </div>
+
+  <!-- Hamburger Menu for Mobile -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <!-- Right side navigation group -->
+  <div class="nav-group" id="navbar">
+    <nav class="nav-links">
+      <a href="https://varshh06.github.io/productpages/home.html">Home</a>
+      <a href="https://varshh06.github.io/productpages/aboutus/ABOUT US.html">About us</a>
+      <a href="https://varshh06.github.io/productpages/products/index.html">Products</a>
+    </nav>
+
+    <!-- Google Translate -->
+    <div id="google_translate_element" class="translate-select"></div>
+
+    <!-- Phone Number -->
+    <div class="contact">
+      <a href="tel:+919842583652" class="phone-link">
+        <svg class="phone-icon" width="20" height="18" viewBox="0 0 24 27" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.72 3.38889C4.8 4.67444 5 5.93111 5.32 7.13L3.72 8.86333C3.17333 7.13 2.82667 5.29556 2.70667 3.38889H4.72ZM17.8667 20.7511C19 21.0978 20.16 21.3144 21.3333 21.4011V23.5533C19.5733 23.4233 17.88 23.0478 16.2667 22.47L17.8667 20.7511ZM6 0.5H1.33333C0.6 0.5 0 1.15 0 1.94444C0 15.5078 10.1467 26.5 22.6667 26.5C23.4 26.5 24 25.85 24 25.0556V20.0144C24 19.22 23.4 18.57 22.6667 18.57C21.0133 18.57 19.4 18.2811 17.9067 17.7467C17.7733 17.6889 17.6267 17.6744 17.4933 17.6744C17.1467 17.6744 16.8133 17.8189 16.5467 18.0933L13.6133 21.2711C9.84 19.1767 6.74667 15.84 4.82667 11.7522L7.76 8.57444C8.13333 8.17 8.24 7.60667 8.09333 7.10111C7.6 5.48333 7.33333 3.75 7.33333 1.94444C7.33333 1.15 6.73333 0.5 6 0.5Z" fill=""/>
+        </svg>
+        <span class="header-phone-number">+91 9842583652</span>
+      </a>
+    </div>
+  </div>
+</header>
   
       <div class="product-container">
         <div class="image-gallery">
@@ -113,8 +123,11 @@
                   <image id="image0_332_61" width="192" height="192" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAMr0lEQVR4nO2dd7BdVRXGfylIh1BDUaQpKp04iEqTokgvojgoSFFAwICI1FGkG0AEZZIgHZQQFIwBlCGIKDAEEqQYKdIlIDB0QgrJu84O+w2Py8vLve+e8p2zv9/MN8lk8sfd3177lH3WXguMMcYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGPS5iPAp4DtgIOBnwNXADcCdwOPA69GvQU0oqb3+PengcnAzcDVwLnAcGBXYENgsbIHaQwxELcGjgF+CzwIzOoR1HmpC3gCGAecBuwCDPWUmCICfmfg/HiFfreAYG9H4e5yJbAvsILDwWTBqsBRwARgpkCQt3OXuB84A/isQ8G0w8rAkfGZvUsgmLPQk8AIYAOHgumNgcA2wFjBR5usNSW+tyzrUDDLACcAzwkEZtF6BxgVd61MYqwJXABMEwjEstUVt2m3KHtSTP6sAoxO4DGnv7ojbu2amrEiMLKgffo6aAKwUdmTZrL5Mhu+or4hEFRVfDQaG++apoLsErf/yg6kqust4GhgcNkTalpjaMy/KTtw6qYHgI0dhNp8JyaUlR0sddVs4CxgwbIn2nyQIcDvBAIkFf0LWN9BqMHWiX7IKlvTgcPKnvyUGRA/6c8WCIaUdT2wZNnBkBqLA78XmHyLuR48AqxddlCklMYQDHfwaXnwOrBt2cFRdzYBXhSYbItePQgpJoeUHSR1Zc/44uXg0/fg9PiOZjLiW05gq5xGx3MWpkPCLXWOwIRatO1BKBbgFIoO+JEDr/ILbywwyLeB9jlUYPIsMvEg5Gb5cagNQmkPP/bUawFe7Bfj1ggV0Px1t546zY9CfTMMeFtgoixy8yCUjDTzKEL1Pwdf7RffLH8x/jCLAg8JTI5FYWkTn/Rt4H3GOPiSW3yPAEt4EXivP2WNSX0BhOQ21+hJW4eTcLnxxwQmwKJUD2YA65Eglzn4vPh4/4zxQiTEbg5+Bz8f9CCUb0+CcH7Uh9i9ABpNHsyOH0Jrz288+b76M+/iWwtQYzavUdcVi1w8CCnwtSSkw05y4HjhMP9apKGad+04yMHv4Kf11Onavfi6moMXQKNFD+bUraHfzzz5vvrTnge3UKNGdMoNKqbG+vefbvoYE/6+FLB6rIH5ksBvTU2bUQPOFDByXgpbsou0OI61gDcFfnNKupUaXP1VT3iFx7J2OVrgd6emzakwJwoY2Jt+2UHPsScEfn9KGk9FCV1EXhAwsFnXdFii4yiBMaS2I7QWFWR/AfOa9VA8ftkJS8cu62WPJSWNpIJMEjyMnVXe+cUC40lJ02IbrMowTMC0Zp1Z8/HVXQdTIUYJGNZTr+VwBblbYFwp6R4qwiKC++U/yWGc3xYYV2palwrwNQGjeiocul8up10ufx2mso+xuaHWvO7POY71DIHxpaQnqEClh2kCRvXUATmXc3QhXwqdzw0RZg+BgG9W3h9RxguMMSWdijAXC9agzLsxw/YC40xJkxFlgGC1h9sLGHdYYE8KjDUVdQHLI8h6AuaUVXvyWIGxpqS9EWS4gDFl5ZAsF0v8lT3eVHQpgowVMKZZYZuyKK4SGG8qehRBpgoYk8Whl/6ys8B4U3oPWBYhVhUwpTedVaAHnxcYb0raCSF2FzCkN11eoAc+KEOhc3syQpwkEOy96e8FjT8clXxKYLwp6TqEuE7AkN4UyrEMKmD8hwuMNTU9ihD/ETCkrNyRNWM9y7LHmZpmAwsjwGDxPl959qBaNH6aL3uMqWodBFhNwIi+dH1O4w6PVuMExpeydkSArQSM6EszYyWHrDlXYGyp61AE2E/AiPnpwIzHfKjAmCwK/c5T6USwv2U43h1isaayx2TBlQhwdkUmY6OMxnuPwFgs5npwEwJcWpEJySo12s29kVEoTVM64yu0b7xGBuM9WWAsFnM9CN+fSufWCk3I1RnVPXLaAxJ6HgHuEDCinTTakLXZKe50j4ReQYCJAka0o3/E88udMkZgLKnrbQS4X8CIMr4LLC1YBCA1zUKAyRW9da6Uwdi/HB+ryh5PqpqJAHcKGNEf3ZzRo9A5AmNJVW8iQJV2gZoVKllkkQ07QWAsKeplBLhJwIj+akZGJbfD+8DjAuNJTc8hwB8EjOhE98UjjVkUBlNtCVtXPYwAVUmFKKJ+UPg+4GrRFDZv4RtU6ZwuEMCdKgTtphl2x/TOEIXM2x8RoC4Hwp/NsNhSeLn2IiD3ObsIAdRaInW6NZpVOfWDfG6AvOfrFAT4okDgqpZT3Dt+rCnqt78YUzRuFuzU06hY95+W+biAEVlqTmx6kRWbFdRML2zDrtCUtXpQzc8vbIUAA2pYF+f1jEtuhMoZD+VcAGxeraAGxtZVVUtabLSg4KsE9wqYkbWeAVbMuIZQHi2kumKAt8KWwI01eUGfHr/CS3C5gCF5aFIM3Cz5ZrzDZPUbw5nsdlk3vivMEfC4Fr3CqlAZor+6MYcrzQoZ9VMOiYgLdPA7VgdGi1f2m5cuQYgdBAzJU6MyyhxtZo8Ojlc+2/TS2wmfiF/0Zwl43ap+iBBL1+S5si9dkNMiWAg4Dni1jd8SNh3Wz+G3rAZcWPDWbX8VdtekmCJgSt76dU6LILBEXAgvtZC2sVMBW9sjhe8IM1QqQ/dktIAxRej8HBcB8aX7COBpgVv/BvHjWkNM4d1Hjn0EjClK5+W8CIgv3l8H/hofL1/L6ABPHZIdRyCIepn0rDWyoO4z3Yuhk92eTviegNfNCmexJXlYwJwiNS6mHNSZ7wv43FPvKD7/dzNCwKCidVfsFF9XjhXwuKduQJjNBAwqK21iGPXkEgF/5ZpizItB8aR+I0FNj81C6sZdAt52a05G9Zxy5TIBo8rUhTnkD5XFgmIH/bNsdJIb2wgYVbYeybAhR5lsI+BlTx1MBRgYn4kbiSukE5yYUcmVsjhHzM/KbDa4icT7Ezclw4oTRb/PPS4Q+N26lgqxZgLJce2oKx6GWZnqsJ+Abz31FSrGbQKmqWlaLMI1BG1WBl4Q8KtbT2VYraMwdhIwTrk8+0nAUPRYJJ6EawjpaCrIwARTI/qT1ntJrCuqwDJi+/7dB/6XpKIoJlKpamLMuwmHi8pgnbh92xBTf848y7CQaD65+l0h7HjsWFDVg4HAYfFLdkNMYevzY1ScYwSMrKpeil+Wt8vpe8LnxOsFhWOolSe8VE0VMLPqCgdiroiHZDr9IPQF4E/iW9XTK7Zt3Cd+F8g2OELgPgCcG+uPrjufAzNDYqbu8TlXqGtkqF9QIwaLvmDVSTNjy6D7YqW+SbEuaBWL5L6aYal6Gb4hYKxVDQ+GU0P2EjDW0vfg3yWef86VPArDWvXzYFtqilOkyw8udV1GTVlLwFxL24OXq5Tv3y6HCRhsaXuwFzVmnIDBlq4HY6kxg2NGX9kmW5oePAssRY2pWxdJi8w8eDemZdSa0HbUQWMPGr14cCQJoHbAwtLwYAwJsGRF+09Z5OpBSMhbjATY1cHkxcQHPXghdqBJgnCgwVdTe9DoUdp8ExLiUU++LwC858G7BfQ2kyLc5nz1tweNeIBnfxLjQE++LwC8F/yVKGqbNdd4ASS/ALrqerillVIb8+t3a9XbgznAd0mUYQITYJXnwWxgXxJGrbGaVZwHbwJfJXFuddAlueim1qQzTseFsGYITIZVrAeT61TIqhNCGT8HX1oeXJlAw/CWOVtgQqxiPJiR6h5/XzzoAExiAT7s5/0PM1S84KqVjQdX1KgXcqaEQq0Osvp68AywQ9lBpszlApNkZe9BFzAaWLzsAFMnVCd2ANbLg4mxkYaZD2sLTJaVnQfPx74OlWtPWhZHCE5gyEg9POYmhT/dqaa12vwnpHJmN0tuENiWuygmYa3RR9O+4XFxlL1A1fRGLGGj3sRbktDA7a2Cj9dNjG10dgOWb/P3LhzvCI8JBF7ZmhobGTrwO2CLnCfpbWBC7K6+dYZ70OH5dnvgLwl+v5gY75Z5dJ9MjlMznpzQW/i6WDls44L65YYS7mfGWpWNGnea/BWwfgF+JkWnvWafjxWCh8cX1gEljiXcFTYFzqvJqbZQimQ8sI8T1vJhqXgCqNUJCf/3n8D5seftSugSelV9CRhRofaiQU8Do4Bd4vuOyZE9WrgC3R4fk0Kq9BJUl1WAA2K/sylC7w3/Ba6OjUg+U7ZJqTGqaTJeibfcH8fS13V+yRoSF/XxMSf+3ngkMK9AnxV3rq4FfgrsHhelKZHbgKuAQ4B1/OVwLh+Nndn3BH4Q736XxvecW6K6m1l368747+Njs7hwruK4uFOzZSw0NqjMiTbGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjEGA/wO7DKCCe/a3XAAAAABJRU5ErkJggg=="/>
                   </defs>
                   </svg>
-              <h4>WhatsApp</h4>
-              <p>+91 9842583652</p>
+             <h4>Contact us on WhatsApp</h4>
+<a href="https://wa.me/919360262443" target="_blank" title="Chat with us on WhatsApp" style="text-decoration: none;">
+  <i class="fab fa-whatsapp" style="font-size: 24px; color: #080808; vertical-align: middle;"></i>
+  <span style="font-size: 18px; color: #070707; margin-left: 8px;">Chat with us</span>
+</a>
           </div>
       </div>
   </div>
@@ -136,6 +149,100 @@ function toggleMenu() {
       document.querySelector('.nav-links').classList.toggle('active');
     }
   </script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+
+<!-- Google Translate Script -->
+<!-- Cookie handling & language apply FIRST -->
+<script>
+  // Set default language based on cookie (before Google loads)
+  (function() {
+    var lang = (document.cookie.match(/(^|;\s*)googtrans=\/en\/(\w+)/) || [])[2];
+    if (lang) {
+      var newCookie = "/en/" + lang;
+      document.cookie = "googtrans=" + newCookie + ";path=/";
+      document.cookie = "googtrans=" + newCookie + ";path=/;domain=" + location.hostname;
+    }
+  })();
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,ta',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+    }, 'google_translate_element');
+  }
+</script>
+
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  // Save user-selected language to cookie
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new MutationObserver(() => {
+      const iframe = document.querySelector('iframe.goog-te-menu-frame');
+      if (iframe) {
+        try {
+          const items = iframe.contentDocument.querySelectorAll('.goog-te-menu2-item span.text');
+          items.forEach(span => {
+            span.addEventListener('click', function() {
+              const lang = span.innerText.toLowerCase().includes("tamil") ? 'ta' : 'en';
+              const val = '/en/' + lang;
+              document.cookie = 'googtrans=' + val + ';path=/';
+              document.cookie = 'googtrans=' + val + ';path=/;domain=' + location.hostname;
+            });
+          });
+        } catch (err) {
+          console.warn("Translate frame error", err);
+        }
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+
+<script>
+  const navbarToggle = document.getElementById("navbar-toggle");
+  const navbar = document.getElementById("navbar");
+
+  navbarToggle.addEventListener("click", () => {
+    navbar.classList.toggle("open");
+  });
+</script>
+
+<script>
+  function setHeaderOffset(isTranslated) {
+    const header = document.querySelector(".top-header"); //top changed
+    if (isTranslated) {
+      header.style.top = "30px";  // Adjust this value as needed
+      document.body.style.paddingTop = `${header.offsetHeight + 15}px`;
+    } else {
+      header.style.top = "0px";
+      document.body.style.paddingTop = `${header.offsetHeight}px`;
+    }
+  }
+
+  function observeTranslate() {
+
+
+    const observer = new MutationObserver(() => {
+      const isTranslated = document.documentElement.classList.contains("translated-ltr") ||
+                           document.documentElement.classList.contains("translated-rtl");
+      setHeaderOffset(isTranslated);
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+  }
+ window.addEventListener("load", observeTranslate);
+</script>
 
 </body>
 </html>
