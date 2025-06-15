@@ -59,7 +59,7 @@
       </div>
 
       <div class="product-details">
-        <h1>SWEET MUSHROOM ELLU PODI</h1>
+        <h1 id="ellu-podi" style="visibility: hidden;">SWEET MUSHROOM ELLU PODI</h1>
         <h4>Price: ₹70.00</h4>
         <h4>Weight: 100gm</h4>
         <p>Sesame powder is rich in vitamins A and B, which are essential for growing children, and contains mushroom powder. It helps to stimulate memory and increase the growth of children. It is also easily digested and prevents constipation. It also strengthens bones in adults and reduces muscle cramps and joint pain.</p>
@@ -135,7 +135,29 @@
   </div>
 </footer>
 
+<script>
+function correctTranslation() {
+    const el = document.getElementById('ellu-podi');
+    if (el) {
+        // Check if Tamil translation exists and is incorrect
+        if (el.innerText.toLowerCase().includes('எல்லு')) {
+            el.innerText = 'எள்ளுப் பொடி';
+        }
+                el.style.visibility = 'visible';
+    }
+}
 
+
+const observer = new MutationObserver(() => {
+    correctTranslation();
+});
+
+
+observer.observe(document.body, { childList: true, subtree: true });
+
+setTimeout(correctTranslation, 2000);
+
+</script>
   
 
   <script>
