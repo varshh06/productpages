@@ -38,9 +38,10 @@
         <div class="products-container">
           <div class="product-card">
             <img src="ellu podi.jpg" alt="Ellu Podi" class="product-img" />
-            <h3 class="product-name">Ellu Podi</h3>
+            <span id="ellu-podi" style="visibility: hidden;"><h2>Ellu Podi</h2></span>
+
             <p class="product-description">
-              Our traditional Ellu Podi is a delightful blend of roasted sesame seeds and aromatic spices, offering a rich nutty flavor. Perfect with rice and ghee, this podi brings an authentic South Indian taste to your meals.
+              Our traditional SWEET MUSHROOM Sesame powder is a delightful blend of roasted sesame and aromatic spices, offering a rich flavor. Perfect with rice and ghee, this podi brings an authentic South Indian taste to your meals.
             </p>
             <div class="product-price">
               <p class="price">₹70</p>
@@ -238,6 +239,29 @@
   }
 
   window.addEventListener("load", observeTranslate);
+</script>
+<script>
+function correctTranslation() {
+    const el = document.getElementById('ellu-podi');
+    if (el) {
+        // Check if Tamil translation exists and is incorrect
+        if (el.innerText.toLowerCase().includes('எல்லு')) {
+            el.innerText = 'எள்ளுப் பொடி';
+        }
+                el.style.visibility = 'visible';
+    }
+}
+
+
+const observer = new MutationObserver(() => {
+    correctTranslation();
+});
+
+
+observer.observe(document.body, { childList: true, subtree: true });
+
+setTimeout(correctTranslation, 2000);
+
 </script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="script.js"></script>
