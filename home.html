@@ -16,6 +16,12 @@
     body.translated-fixed .navbar {
   top: 40px; /* Adjust based on the height of the Google Translate bar */
 }
+/* google taskbar hidden */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+body > .skiptranslate {
+  display: none !important;
+}
  html body .goog-te-banner-frame,
   html body .goog-te-banner-frame.skiptranslate {
     top: 0!important;
@@ -1001,7 +1007,7 @@ width: 100%;
 </script>
 
 <script>
-  function setHeaderOffset(isTranslated) {
+  <!-- function setHeaderOffset(isTranslated) {
     const header = document.querySelector(".header");
     if (isTranslated) {
       header.style.top = "25px";
@@ -1010,7 +1016,7 @@ width: 100%;
       header.style.top = "0px";
       document.body.style.paddingTop = `${header.offsetHeight}px`;
     }
-  }
+  } -->
 
   function observeTranslate() {
     const observer = new MutationObserver(() => {
