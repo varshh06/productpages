@@ -1,171 +1,235 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Page</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="main-content">
+      <div class="background">
 
+        <div class="overlay">
 
-  <div class="main-content">
-    <div class="background">
-      <div class="overlay">
-       <header class="top-header">
-  <!-- Logo Left -->
-  <div class="logo lucky-farm-badge">
-    <img src="images/logo.png" alt="Lucky Farm Logo" />
-    <span>Lucky Farm</span>
-  </div>
+          <header class="top-header">
+            <!-- Logo Left -->
+            <div class="logo lucky-farm-badge">
+              <img src="images/logo.png" alt="Lucky Farm Logo" />
+              <span>Lucky Farm</span>
+            </div>
+            <!-- Hamburger Menu for Mobile -->
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <!-- Hamburger Menu for Mobile -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <!-- Right side navigation group -->
+            <div class="nav-group" id="navbar">
+              <nav class="nav-links">
+                <a href="https://varshh06.github.io/productpages/home.html"
+                  >Home</a
+                >
+                <a
+                  href="https://varshh06.github.io/productpages/products/index.html"
+                  >Products</a
+                >
+                <a
+                  href="https://varshh06.github.io/productpages/aboutus/ABOUT US.html"
+                  >About us</a
+                >
+              </nav>
 
-  <!-- Right side navigation group -->
-  <div class="nav-group" id="navbar">
-    <nav class="nav-links">
-      <a href="https://varshh06.github.io/productpages/home.html">Home</a>
-      <a href="https://varshh06.github.io/productpages/products/index.html">Products</a>
-      <a href="https://varshh06.github.io/productpages/aboutus/ABOUT US.html">About us</a>
-    </nav>
+              <!-- Google Translate -->
+              <div id="google_translate_element" class="translate-select"></div>
 
-    <!-- Google Translate -->
-    <div id="google_translate_element" class="translate-select"></div>
+              <!-- Phone Number -->
+              <div class="contact">
+                <a href="tel:+919842583652" class="phone-link">
+                  <svg
+                    class="phone-icon"
+                    width="20"
+                    height="18"
+                    viewBox="0 0 24 27"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.72 3.38889C4.8 4.67444 5 5.93111 5.32 7.13L3.72 8.86333C3.17333 7.13 2.82667 5.29556 2.70667 3.38889H4.72ZM17.8667 20.7511C19 21.0978 20.16 21.3144 21.3333 21.4011V23.5533C19.5733 23.4233 17.88 23.0478 16.2667 22.47L17.8667 20.7511ZM6 0.5H1.33333C0.6 0.5 0 1.15 0 1.94444C0 15.5078 10.1467 26.5 22.6667 26.5C23.4 26.5 24 25.85 24 25.0556V20.0144C24 19.22 23.4 18.57 22.6667 18.57C21.0133 18.57 19.4 18.2811 17.9067 17.7467C17.7733 17.6889 17.6267 17.6744 17.4933 17.6744C17.1467 17.6744 16.8133 17.8189 16.5467 18.0933L13.6133 21.2711C9.84 19.1767 6.74667 15.84 4.82667 11.7522L7.76 8.57444C8.13333 8.17 8.24 7.60667 8.09333 7.10111C7.6 5.48333 7.33333 3.75 7.33333 1.94444C7.33333 1.15 6.73333 0.5 6 0.5Z"
+                      fill=""
+                    />
+                  </svg>
+                  <span class="header-phone-number">+91 9842583652</span>
+                </a>
+              </div>
+            </div>
+          </header>
 
-    <!-- Phone Number -->
-    <div class="contact">
-      <a href="tel:+919842583652" class="phone-link">
-        <svg class="phone-icon" width="20" height="18" viewBox="0 0 24 27" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.72 3.38889C4.8 4.67444 5 5.93111 5.32 7.13L3.72 8.86333C3.17333 7.13 2.82667 5.29556 2.70667 3.38889H4.72ZM17.8667 20.7511C19 21.0978 20.16 21.3144 21.3333 21.4011V23.5533C19.5733 23.4233 17.88 23.0478 16.2667 22.47L17.8667 20.7511ZM6 0.5H1.33333C0.6 0.5 0 1.15 0 1.94444C0 15.5078 10.1467 26.5 22.6667 26.5C23.4 26.5 24 25.85 24 25.0556V20.0144C24 19.22 23.4 18.57 22.6667 18.57C21.0133 18.57 19.4 18.2811 17.9067 17.7467C17.7733 17.6889 17.6267 17.6744 17.4933 17.6744C17.1467 17.6744 16.8133 17.8189 16.5467 18.0933L13.6133 21.2711C9.84 19.1767 6.74667 15.84 4.82667 11.7522L7.76 8.57444C8.13333 8.17 8.24 7.60667 8.09333 7.10111C7.6 5.48333 7.33333 3.75 7.33333 1.94444C7.33333 1.15 6.73333 0.5 6 0.5Z" fill=""/>
-        </svg>
-        <span class="header-phone-number">+91 9842583652</span>
-      </a>
-    </div>
-  </div>
-</header>
-  
-  
-  
-      <div class="product-container">
-        <div class="image-gallery">
-          <img id="mainImage" src="images/oystermushroom.jpg" alt="Main product image" />
-          <div class="thumbnail-images">
-            <img src="images/oystermushroom.jpg" alt="Thumbnail 1" onclick="changeImage(this)" />
-            <img src="images/oyster1.jpg" alt="Thumbnail 2" onclick="changeImage(this)" />
-            <img src="images/oyster.jpg" alt="Thumbnail 3" onclick="changeImage(this)" />
+          <div class="product-container">
+            <div class="image-gallery">
+              <img
+                id="mainImage"
+                src="images/oystermushroom.jpg"
+                alt="Main product image"
+              />
+              <div class="thumbnail-images">
+                <img
+                  src="images/oystermushroom.jpg"
+                  alt="Thumbnail 1"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/oyster1.jpg"
+                  alt="Thumbnail 2"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="images/oyster.jpg"
+                  alt="Thumbnail 3"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+
+            <div class="product-details">
+              <h1>OYSTER MUSHROOM</h1>
+              <h4>Price: ₹250.00</h4>
+              <h4>Weight: 1kg</h4>
+              <p>
+                Oyster mushrooms offer a range of health benefits, including
+                boosting the immune system, supporting heart health, and helping
+                regulate blood sugar levels. They are also a good source of B
+                vitamins, antioxidants, and dietary fiber.
+              </p>
+              <button class="buy-button" onclick="showPopup()">
+                Buy Now
+                <svg
+                  width="10"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 16L6.575 14.6L12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="popup-overlay" id="popup">
+          <div class="popup-box">
+            <button class="close-btn" onclick="hidePopup()">×</button>
+            <div class="popup-text">
+              YOU CAN PLACE YOUR ORDER BY SIMPLY CALLING
+            </div>
+            <div class="popup-content">
+              <a href="tel:+919842583652" class="phone-number">
+                <svg
+                  width="20"
+                  height="18"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.72 3.38889C4.8 4.67444 5 5.93111 5.32 7.13L3.72 8.86333C3.17333 7.13 2.82667 5.29556 2.70667 3.38889H4.72ZM17.8667 20.7511C19 21.0978 20.16 21.3144 21.3333 21.4011V23.5533C19.5733 23.4233 17.88 23.0478 16.2667 22.47L17.8667 20.7511ZM6 0.5H1.33333C0.6 0.5 0 1.15 0 1.94444C0 15.5078 10.1467 26.5 22.6667 26.5C23.4 26.5 24 25.85 24 25.0556V20.0144C24 19.22 23.4 18.57 22.6667 18.57C21.0133 18.57 19.4 18.2811 17.9067 17.7467C17.7733 17.6889 17.6267 17.6744 17.4933 17.6744C17.1467 17.6744 16.8133 17.8189 16.5467 18.0933L13.6133 21.2711C9.84 19.1767 6.74667 15.84 4.82667 11.7522L7.76 8.57444C8.13333 8.17 8.24 7.60667 8.09333 7.10111C7.6 5.48333 7.33333 3.75 7.33333 1.94444C7.33333 1.15 6.73333 0.5 6 0.5Z"
+                    fill=""
+                  />
+                </svg>
+                +91 9842583652
+              </a>
+            </div>
           </div>
         </div>
-  
-  
-  
-        <div class="product-details">
-          <h1>OYSTER MUSHROOM</h1>
-          <h4>Price: ₹300.00</h4>
-          <h4>Weight: 1kg</h4>
-          <p>Oyster mushrooms offer a range of health benefits, including boosting the immune system, supporting heart health, and helping regulate blood sugar levels. They are also a good source of B vitamins, antioxidants, and dietary fiber. </p>
-          <button class="buy-button" onclick="showPopup()">Buy Now
-            <svg width="10" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 16L6.575 14.6L12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16Z" fill="black"/>
-            </svg>
-          </button>
-        </div>
       </div>
     </div>
-  
-  
-    <div class="popup-overlay" id="popup">
-      <div class="popup-box">
-        <button class="close-btn" onclick="hidePopup()">×</button>
-        <div class="popup-text">
-          YOU CAN PLACE YOUR ORDER BY SIMPLY CALLING
-        </div>
-        <div class="popup-content">
-          <a href="tel:+919842583652" class="phone-number">
-            <svg width="20" height="18" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.72 3.38889C4.8 4.67444 5 5.93111 5.32 7.13L3.72 8.86333C3.17333 7.13 2.82667 5.29556 2.70667 3.38889H4.72ZM17.8667 20.7511C19 21.0978 20.16 21.3144 21.3333 21.4011V23.5533C19.5733 23.4233 17.88 23.0478 16.2667 22.47L17.8667 20.7511ZM6 0.5H1.33333C0.6 0.5 0 1.15 0 1.94444C0 15.5078 10.1467 26.5 22.6667 26.5C23.4 26.5 24 25.85 24 25.0556V20.0144C24 19.22 23.4 18.57 22.6667 18.57C21.0133 18.57 19.4 18.2811 17.9067 17.7467C17.7733 17.6889 17.6267 17.6744 17.4933 17.6744C17.1467 17.6744 16.8133 17.8189 16.5467 18.0933L13.6133 21.2711C9.84 19.1767 6.74667 15.84 4.82667 11.7522L7.76 8.57444C8.13333 8.17 8.24 7.60667 8.09333 7.10111C7.6 5.48333 7.33333 3.75 7.33333 1.94444C7.33333 1.15 6.73333 0.5 6 0.5Z" fill=""/>
-            </svg>
-            +91 9842583652
-          </a>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  </div>
-  
 
-   <footer class="footer">
-    <h2>Where to find us ?</h2>
-    <h3>Let's Get In Touch</h3>
-    <section class="contact-container">
-       <article class="contact-card">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/47f2431820d445d9c9410ace780261a2b4224dc0?placeholderIfAbsent=true" alt="Location icon" loading="lazy">
-            <h4>Location</h4>
-            <address>
-                <a href="https://maps.app.goo.gl/N6QNCEwEN2EYFeu9A" target="_blank" aria-label="View on Google Maps">
-                 R.Sujatha
-                 36/59A Rajaveethi 
-                 Lucky Farm 
-                 Udayarpalayam 
-                Ariyalur dt 621804
-                </a>
-            </address>
-          </article>
+    <footer class="footer">
+      <h2>Where to find us ?</h2>
+      <h3>Let's Get In Touch</h3>
+      <section class="contact-container">
         <article class="contact-card">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/77c68037065e5603aa3c8b23dc4617334d6c70a1?placeholderIfAbsent=true" alt="Email icon" loading="lazy">
-            <h4>Email</h4>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/47f2431820d445d9c9410ace780261a2b4224dc0?placeholderIfAbsent=true"
+            alt="Location icon"
+            loading="lazy"
+          />
+          <h4>Location</h4>
           <address>
-          <a href="mailto:rsujathaa1977@gmail.com">
-        rsujathaa1977@gmail.com
-    </a>
-</address>
-
+            <a
+              href="https://maps.app.goo.gl/N6QNCEwEN2EYFeu9A"
+              target="_blank"
+              aria-label="View on Google Maps"
+            >
+              R.Sujatha 36/59A Rajaveethi Lucky Farm Udayarpalayam Ariyalur dt
+              621804
+            </a>
+          </address>
         </article>
         <article class="contact-card">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e485b81a8c68c565d7f699d03b8c69b836e57df0?placeholderIfAbsent=true" alt="Whatsapp icon" loading="lazy">
-           <h4>WhatsApp</h4>
-<address>
-    <a href="https://wa.me/919842583652 " target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
-    </a>
-</address>
-
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/77c68037065e5603aa3c8b23dc4617334d6c70a1?placeholderIfAbsent=true"
+            alt="Email icon"
+            loading="lazy"
+          />
+          <h4>Email</h4>
+          <address>
+            <a href="mailto:rsujathaa1977@gmail.com">
+              rsujathaa1977@gmail.com
+            </a>
+          </address>
         </article>
-    </section>
-    <p>© 2025 Lucky Farm. All rights reserved.</p>
-</footer>
-<style>
-   .footer {
+        <article class="contact-card">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e485b81a8c68c565d7f699d03b8c69b836e57df0?placeholderIfAbsent=true"
+            alt="Whatsapp icon"
+            loading="lazy"
+          />
+          <h4>WhatsApp</h4>
+          <address>
+            <a
+              href="https://wa.me/919842583652 "
+              target="_blank"
+              aria-label="Chat on WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+            </a>
+          </address>
+        </article>
+      </section>
+      <p>© 2025 Lucky Farm. All rights reserved.</p>
+    </footer>
+    <style>
+      .footer {
         display: flex;
         flex-direction: column;
         align-items: center;
         /* padding: 1.5rem 0.75rem; */
         padding: 0.75rem;
-         color: black; 
-        
+        color: black;
+
         justify-content: flex-end;
         /* background-color: #bef264; */
         background: transparent;
         backdrop-filter: blur(2px);
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
         width: 100%;
-    }
+      }
 
-    .footer h2 {
+      .footer h2 {
         /* font-size: 1.25rem;
         line-height: 1.75rem; */
         font-size: 1.875rem;
         line-height: 2.25rem;
         color: white;
-    }
-    .footer p{
+      }
+      .footer p {
         color: white;
-    }
+      }
 
-    .footer h3 {
+      .footer h3 {
         /* margin-top: 0.5rem;
         font-size: 2rem;
         line-height: 1;
@@ -176,9 +240,9 @@
         line-height: 1;
         font-weight: 700;
         color: white;
-    }
+      }
 
-    .contact-container {
+      .contact-container {
         display: flex;
         flex-wrap: wrap;
         flex: 1;
@@ -190,9 +254,9 @@
         width: 100%;
         /* margin-top: 0.75rem;
         padding: 0 0.5rem; */
-    }
+      }
 
-    .contact-card {
+      .contact-card {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -208,20 +272,20 @@
         flex: 1;
         flex-shrink: 1;
         transition: transform 0.2s ease;
-    }
+      }
 
-    .contact-card:hover {
+      .contact-card:hover {
         transform: translateY(-2px);
-    }
+      }
 
-    .contact-card img {
+      .contact-card img {
         object-fit: contain;
         /* width: 60px; */
         width: 120px;
         aspect-ratio: 1;
-    }
+      }
 
-    .contact-card h4 {
+      .contact-card h4 {
         /* margin-top: 0.375rem;
         font-size: 1.25rem;
         line-height: 1.75rem;
@@ -230,9 +294,9 @@
         font-size: 1.875rem;
         line-height: 2.25rem;
         font-weight: 700;
-    }
+      }
 
-    .contact-card address {
+      .contact-card address {
         /* margin-top: 0.375rem;
         font-size: 1rem;
         line-height: 1.5;
@@ -245,167 +309,191 @@
         line-height: 2rem;
         text-align: center;
         font-style: normal;
-    } 
+      }
 
-    .contact-card a {
+      .contact-card a {
         color: inherit;
         text-decoration: none;
         transition: color 0.2s ease;
-    }
+      }
 
-    .contact-card a:hover {
+      .contact-card a:hover {
         color: #4a5568;
-    }
+      }
 
-    @media (max-width: 768px) {
+      @media (max-width: 768px) {
         .contact-container {
-            /* gap: 0.375rem; */
-            max-width: 100%;
+          /* gap: 0.375rem; */
+          max-width: 100%;
         }
 
         .footer h3 {
-            /* font-size: 1.5rem; */
-            font-size: 2rem;
+          /* font-size: 1.5rem; */
+          font-size: 2rem;
         }
 
         .footer h2 {
-            /* font-size: 1rem; */
-            font-size: 1.5rem;
+          /* font-size: 1rem; */
+          font-size: 1.5rem;
         }
 
         /* .contact-card {
             min-width: 150px;
             padding: 0.375rem;
         } */
-         .footer p{
-            color: white;
-         }
+        .footer p {
+          color: white;
+        }
 
         .contact-card h4 {
-            /* font-size: 1rem; */
-            font-size: 1.5rem;
+          /* font-size: 1rem; */
+          font-size: 1.5rem;
         }
 
         .contact-card address {
-            /* font-size: 0.875rem; */
-            font-size: 1.25rem;
+          /* font-size: 0.875rem; */
+          font-size: 1.25rem;
         }
 
         .contact-card img {
-            width: 40px;
-        }
-    }
-</style>
-  <script>
-    function changeImage(imgElement) {
-      const newSrc = imgElement.src.replace('100x100', '500x500');
-      document.getElementById('mainImage').src = newSrc;
-      document.getElementById('mainImage').alt = imgElement.alt.replace('Thumbnail', 'Main image');
-    }
-    function showPopup() {
-  document.getElementById('popup').style.display = 'flex';
-  }
-function hidePopup() {
-  document.getElementById('popup').style.display = 'none';
-}
-function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('active');
-    }
-  </script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="script.js"></script>
-
-<!-- Google Translate Script -->
-<!-- Cookie handling & language apply FIRST -->
-<script>
-  // Set default language based on cookie (before Google loads)
-  (function() {
-    var lang = (document.cookie.match(/(^|;\s*)googtrans=\/en\/(\w+)/) || [])[2];
-    if (lang) {
-      var newCookie = "/en/" + lang;
-      document.cookie = "googtrans=" + newCookie + ";path=/";
-      document.cookie = "googtrans=" + newCookie + ";path=/;domain=" + location.hostname;
-    }
-  })();
-</script>
-
-
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,ta',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    }, 'google_translate_element');
-  }
-</script>
-
-
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<script>
-  // Save user-selected language to cookie
-  document.addEventListener('DOMContentLoaded', function() {
-    const observer = new MutationObserver(() => {
-      const iframe = document.querySelector('iframe.goog-te-menu-frame');
-      if (iframe) {
-        try {
-          const items = iframe.contentDocument.querySelectorAll('.goog-te-menu2-item span.text');
-          items.forEach(span => {
-            span.addEventListener('click', function() {
-              const lang = span.innerText.toLowerCase().includes("tamil") ? 'ta' : 'en';
-              const val = '/en/' + lang;
-              document.cookie = 'googtrans=' + val + ';path=/';
-              document.cookie = 'googtrans=' + val + ';path=/;domain=' + location.hostname;
-            });
-          });
-        } catch (err) {
-          console.warn("Translate frame error", err);
+          width: 40px;
         }
       }
-    });
+    </style>
+    <script>
+      function changeImage(imgElement) {
+        const newSrc = imgElement.src.replace("100x100", "500x500");
+        document.getElementById("mainImage").src = newSrc;
+        document.getElementById("mainImage").alt = imgElement.alt.replace(
+          "Thumbnail",
+          "Main image"
+        );
+      }
+      function showPopup() {
+        document.getElementById("popup").style.display = "flex";
+      }
+      function hidePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+      }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
 
-    observer.observe(document.body, { childList: true, subtree: true });
-  });
-</script>
+    <!-- Google Translate Script -->
+    <!-- Cookie handling & language apply FIRST -->
+    <script>
+      // Set default language based on cookie (before Google loads)
+      (function () {
+        var lang = (document.cookie.match(/(^|;\s*)googtrans=\/en\/(\w+)/) ||
+          [])[2];
+        if (lang) {
+          var newCookie = "/en/" + lang;
+          document.cookie = "googtrans=" + newCookie + ";path=/";
+          document.cookie =
+            "googtrans=" + newCookie + ";path=/;domain=" + location.hostname;
+        }
+      })();
+    </script>
 
-<script>
-  const navbarToggle = document.getElementById("navbar-toggle");
-  const navbar = document.getElementById("navbar");
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,ta",
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector(".nav-links");
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("show");
+        });
+      });
+    </script>
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileNav").classList.toggle("show");
+      }
+    </script>
 
-  navbarToggle.addEventListener("click", () => {
-    navbar.classList.toggle("open");
-  });
-</script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<script>
-  <!-- function setHeaderOffset(isTranslated) {
-    const header = document.querySelector(".top-header"); //top changed
-    if (isTranslated) {
-      header.style.top = "30px";  // Adjust this value as needed
-      document.body.style.paddingTop = `${header.offsetHeight + 15}px`;
-    } else {
-      header.style.top = "0px";
-      document.body.style.paddingTop = `${header.offsetHeight}px`;
-    }
-  } -->
+    <script>
+      // Save user-selected language to cookie
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new MutationObserver(() => {
+          const iframe = document.querySelector("iframe.goog-te-menu-frame");
+          if (iframe) {
+            try {
+              const items = iframe.contentDocument.querySelectorAll(
+                ".goog-te-menu2-item span.text"
+              );
+              items.forEach((span) => {
+                span.addEventListener("click", function () {
+                  const lang = span.innerText.toLowerCase().includes("tamil")
+                    ? "ta"
+                    : "en";
+                  const val = "/en/" + lang;
+                  document.cookie = "googtrans=" + val + ";path=/";
+                  document.cookie =
+                    "googtrans=" + val + ";path=/;domain=" + location.hostname;
+                });
+              });
+            } catch (err) {
+              console.warn("Translate frame error", err);
+            }
+          }
+        });
 
-  function observeTranslate() {
+        observer.observe(document.body, { childList: true, subtree: true });
+      });
+    </script>
+
+    <script>
+      const navbarToggle = document.getElementById("navbar-toggle");
+      const navbar = document.getElementById("navbar");
+
+      navbarToggle.addEventListener("click", () => {
+        navbar.classList.toggle("open");
+      });
+    </script>
+
+    <script>
+       <!-- function setHeaderOffset(isTranslated) {
+         const header = document.querySelector(".top-header"); //top changed
+         if (isTranslated) {
+           header.style.top = "30px";  // Adjust this value as needed
+           document.body.style.paddingTop = `${header.offsetHeight + 15}px`;
+         } else {
+           header.style.top = "0px";
+           document.body.style.paddingTop = `${header.offsetHeight}px`;
+         }
+       } -->
+
+       function observeTranslate() {
 
 
-    const observer = new MutationObserver(() => {
-      const isTranslated = document.documentElement.classList.contains("translated-ltr") ||
-                           document.documentElement.classList.contains("translated-rtl");
-      setHeaderOffset(isTranslated);
-    });
+         const observer = new MutationObserver(() => {
+           const isTranslated = document.documentElement.classList.contains("translated-ltr") ||
+                                document.documentElement.classList.contains("translated-rtl");
+           setHeaderOffset(isTranslated);
+         });
 
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class']
-    });
-  }
- window.addEventListener("load", observeTranslate);
-</script>
-
-</body>
+         observer.observe(document.documentElement, {
+           attributes: true,
+           attributeFilter: ['class']
+         });
+       }
+      window.addEventListener("load", observeTranslate);
+    </script>
+  </body>
 </html>
